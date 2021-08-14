@@ -11,6 +11,9 @@
     <modules>
         <module>algorithm</module>
         <module>designPattern</module>
+        <module>httpServer</module>
+        <module>opencvLearn</module>
+        <module>rpc</module>
     </modules>
 
 
