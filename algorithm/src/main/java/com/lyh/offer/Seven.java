@@ -8,13 +8,14 @@ import java.util.Stack;
  */
 public class Seven {
 
-    public Stack<Integer> stack1 = new Stack();
-    public Stack<Integer> stack2 = new Stack();
-    public void push(int node){
+    public static Stack<Integer> stack1 = new Stack();
+    public static Stack<Integer> stack2 = new Stack();
+
+    public static void push(int node){
         stack1.push(node);
     }
 
-    public int pop() throws Exception{
+    public static int pop() throws Exception{
         if(stack1.isEmpty() && stack2.isEmpty()){
             throw new Exception("栈为空");
         }
@@ -26,7 +27,16 @@ public class Seven {
         return stack2.pop();
     }
 
-    public static void main(String[] args) {
-
+    public static void main(String[] args) throws Exception{
+        push(1);
+        push(2);
+        push(3);
+        push(4);
+        push(5);
+        System.out.println(pop());
+        System.out.println(pop());
+        System.out.println(pop());
+        System.out.println(pop());
+        System.out.println(pop());
     }
 }
