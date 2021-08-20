@@ -20,15 +20,17 @@ public class HttpClient {
         urlConnection.connect();
 
         InputStream inputStream = urlConnection.getInputStream();
-        ByteArrayOutputStream bout2 = new ByteArrayOutputStream();
-        int len;
-        byte[] bytes = new byte[1024 * 8];
-        while ((len = inputStream.read(bytes)) != -1){
-            bout2.write(bytes,0,len);
+        int responseCode = urlConnection.getResponseCode();
+        if(responseCode == HttpURLConnection.HTTP_OK){
+            ByteArrayOutputStream bout2 = new ByteArrayOutputStream();
+            int len;
+            byte[] bytes = new byte[1024 * 8];
+            while ((len = inputStream.read(bytes)) != -1){
+                bout2.write(bytes,0,len);
+            }
+            String result2 = new String(bout2.toByteArray());
+            System.out.println(result2);
         }
-
-        String result2 = new String(bout2.toByteArray());
-        System.out.println(result2);
         urlConnection.disconnect();
     }
 

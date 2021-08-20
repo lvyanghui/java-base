@@ -1,5 +1,6 @@
 package com.lyh.http;
 
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.net.Socket;
@@ -14,15 +15,26 @@ public class SocketClient {
         Socket socket = new Socket();
         socket.connect(new InetSocketAddress("127.0.0.1",port));
 
-        String httpRequest = "hello，服务器" + i;
+        String httpRequest = "hello, world" + i;
         socket.getOutputStream().write(httpRequest.getBytes());
+
+        ByteArrayOutputStream bout = new ByteArrayOutputStream();
+        int len;
+        byte[] bytes = new byte[1024 * 8];
+        while ((len = socket.getInputStream().read(bytes)) != -1){
+            bout.write(bytes,0,len);
+        }
+
+        String result2 = new String(bout.toByteArray());
+        System.out.println(result2);
         socket.close();
     }
 
     public static void main(String[] args) throws Exception{
         SocketClient socketClient = new SocketClient();
-        for (int i = 0; i < 100000; i++) {
+        /*for (int i = 0; i < 100000; i++) {
             socketClient.sendHttpRequest(8080,i);
-        }
+        }*/
+        socketClient.sendHttpRequest(8080,1);
     }
 }
