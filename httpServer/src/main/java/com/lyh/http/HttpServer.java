@@ -16,7 +16,7 @@ public class HttpServer {
             while (true){
                 Socket socket = server.accept();
                 HttpHandler handler = new HttpHandler();
-                handler.parseHttp(socket.getInputStream());
+                handler.parseHttp(socket);
             }
         }
     }
