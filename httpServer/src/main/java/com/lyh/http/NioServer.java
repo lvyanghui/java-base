@@ -2,7 +2,6 @@ package com.lyh.http;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
-import java.net.Socket;
 import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
 import java.nio.channels.ServerSocketChannel;
@@ -44,9 +43,8 @@ public class NioServer implements HttpServer{
                     if(selectionKey.isReadable()){
                         SocketChannel channel = (SocketChannel)selectionKey.channel();
                         channel.configureBlocking(false);
-                        Socket socket = channel.socket();
                         HttpHandler handler = new HttpHandler();
-                        handler.parseHttp(socket);
+                        handler.parseHttp(channel);
                     }
                 }
             }

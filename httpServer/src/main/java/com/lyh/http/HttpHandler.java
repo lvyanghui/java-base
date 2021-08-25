@@ -4,6 +4,8 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.Socket;
+import java.nio.ByteBuffer;
+import java.nio.channels.SocketChannel;
 
 /**
  * Created by lvyanghui
@@ -66,11 +68,47 @@ public class HttpHandler {
             contextLength = data.length;
         }
         //response.setHeader("Content-Length", contextLength.toString());
-        StringBuilder responseHeader = new StringBuilder("HTTP/1.1 ").append(200).append(" ").append("\r\n");
+        StringBuilder responseHeader = new StringBuilder("HTTP/1.1").append(" ").append(200).append(" ").append("\r\n");
         responseHeader.append("\r\n");
 
         socket.getOutputStream().write(responseHeader.toString().getBytes("UTF-8"));
         socket.getOutputStream().write(data);
     }
 
+
+    public void parseHttp(SocketChannel channel)throws IOException{
+
+        ByteBuffer byteBuffer = ByteBuffer.allocate(1024 * 8);
+        int len = channel.read(byteBuffer);
+        ByteArrayOutputStream bout2 = new ByteArrayOutputStream();
+        if(len > 0){
+            bout2.write(byteBuffer.array(),0,len);
+        }
+        String headerContext = new String(bout2.toByteArray(), "iso-8859-1");
+        String bodyContext = null;
+        if (headerContext.contains(splitFlag)) {
+            bodyContext = headerContext.substring(headerContext.indexOf(splitFlag) + splitFlag.length());
+            headerContext = headerContext.substring(0, headerContext.indexOf(splitFlag));
+        }
+
+        System.out.println("headerContext" + headerContext);
+        System.out.println("bodyContext" + bodyContext);
+
+        buildResponse(channel,"接收到NIO响应");
+
+    }
+
+    public void buildResponse(SocketChannel channel, String data) throws IOException {
+
+        StringBuilder builder = new StringBuilder("HTTP/1.1").append(" ").append(200).append(" ").append("\r\n");
+        builder.append("\r\n");
+        ByteBuffer header = ByteBuffer.wrap(builder.toString().getBytes("utf-8"));
+        ByteBuffer result = ByteBuffer.wrap(data.getBytes("utf-8"));
+
+        channel.write(new ByteBuffer[]{header, result});
+        while (result.hasRemaining()) {
+            channel.write(result);
+        }
+        channel.close();
+    }
 }
