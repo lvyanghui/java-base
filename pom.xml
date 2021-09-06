@@ -15,6 +15,7 @@
         <module>opencvLearn</module>
         <module>rpc</module>
         <module>servlet</module>
+        <module>fund</module>
     </modules>
 
 

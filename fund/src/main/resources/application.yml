@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: fund
+server:
+  port: 8000
+  servlet:
+    context-path: /fund
+
