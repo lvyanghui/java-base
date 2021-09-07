@@ -13,9 +13,9 @@ import java.util.List;
  */
 public class App {
     public static void main( String[] args ) throws IOException{
-        List<String> total = getList("G:\\workspace\\基金\\total.txt");
-        List<String> one = getList("G:\\workspace\\基金\\one.txt");
-        List<String> three = getList("G:\\workspace\\基金\\three.txt");
+        List<String> total = getList("G:\\workspace\\fund\\total.txt");
+        List<String> one = getList("G:\\workspace\\fund\\one.txt");
+        List<String> three = getList("G:\\workspace\\fund\\three.txt");
 
         total.retainAll(three);
         total.forEach(item->{
