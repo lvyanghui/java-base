@@ -22,6 +22,6 @@ public class HelloController {
 
     @RequestMapping("/fund")
     public void getFund(){
-        service.getFunds();
+        service.insertFundDetail();
     }
 }

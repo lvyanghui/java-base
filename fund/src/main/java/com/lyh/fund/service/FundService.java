@@ -1,5 +1,7 @@
 package com.lyh.fund.service;
 
+import com.lyh.fund.domain.FundDetailInfo;
+import com.lyh.fund.mapper.FundDetailInfoMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -17,8 +19,8 @@ public class FundService {
 
     @Autowired
     RestTemplate restTemplate;
-
-
+    @Autowired
+    FundDetailInfoMapper fundDetailInfoMapper;
     public void getFunds(){
         //4. 设置header的Get请求
         String url = "http://fund.eastmoney.com/data/rankhandler.aspx?op=ph&dt=kf&ft=all&rs=&gs=0&sc=lnzf&st=desc&sd=2019-12-10&ed=2020-12-10&qdii=&tabSubtype=,,,,,&pi=1&pn=10000&dx=1&v=0.17771342305527527";
@@ -31,5 +33,11 @@ public class FundService {
 
         System.out.println("设置header的Get请求:" + response.getBody().substring(0,10));
 
+    }
+
+    public void insertFundDetail(){
+        FundDetailInfo fundDetailInfo = new FundDetailInfo();
+        fundDetailInfo.setFundCode("1111111");
+        fundDetailInfoMapper.insertSelective(fundDetailInfo);
     }
 }

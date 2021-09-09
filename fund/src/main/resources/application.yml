@@ -1,8 +1,19 @@
 spring:
   application:
     name: fund
+  datasource:
+    url: jdbc:mysql://192.168.112.133/fund
+    username: root
+    password: admin
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+
 server:
   port: 8000
   servlet:
     context-path: /fund
+mybatis:
+  mapper-locations: classpath:mapping/*.xml
+
+
 

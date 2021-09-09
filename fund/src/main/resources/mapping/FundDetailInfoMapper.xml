@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lyh.fund.mapper.FundDetailInfoMapper">
+  <resultMap id="BaseResultMap" type="com.lyh.fund.domain.FundDetailInfo">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="fund_code" jdbcType="VARCHAR" property="fundCode" />
+    <result column="fund_name" jdbcType="VARCHAR" property="fundName" />
+    <result column="fund_pinyin" jdbcType="VARCHAR" property="fundPinyin" />
+    <result column="fund_date" jdbcType="DATE" property="fundDate" />
+    <result column="net_asset_value" jdbcType="DECIMAL" property="netAssetValue" />
+    <result column="accumulated_net" jdbcType="DECIMAL" property="accumulatedNet" />
+    <result column="daily_grow_rate" jdbcType="DECIMAL" property="dailyGrowRate" />
+    <result column="nearly_1_week" jdbcType="DECIMAL" property="nearly1Week" />
+    <result column="nearly_1_month" jdbcType="DECIMAL" property="nearly1Month" />
+    <result column="nearly_3_month" jdbcType="DECIMAL" property="nearly3Month" />
+    <result column="nearly_6_month" jdbcType="DECIMAL" property="nearly6Month" />
+    <result column="nearly_1_year" jdbcType="DECIMAL" property="nearly1Year" />
+    <result column="nearly_2_year" jdbcType="DECIMAL" property="nearly2Year" />
+    <result column="nearly_3_year" jdbcType="DECIMAL" property="nearly3Year" />
+    <result column="since_this_year" jdbcType="DECIMAL" property="sinceThisYear" />
+    <result column="since_establish" jdbcType="DECIMAL" property="sinceEstablish" />
+    <result column="establish_date" jdbcType="DATE" property="establishDate" />
+    <result column="unknown_1" jdbcType="INTEGER" property="unknown1" />
+    <result column="custom" jdbcType="DECIMAL" property="custom" />
+    <result column="service_charge" jdbcType="DECIMAL" property="serviceCharge" />
+    <result column="discount_service_charge" jdbcType="DECIMAL" property="discountServiceCharge" />
+    <result column="discount" jdbcType="DECIMAL" property="discount" />
+    <result column="unknown_2" jdbcType="DECIMAL" property="unknown2" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, fund_code, fund_name, fund_pinyin, fund_date, net_asset_value, accumulated_net, 
+    daily_grow_rate, nearly_1_week, nearly_1_month, nearly_3_month, nearly_6_month, nearly_1_year, 
+    nearly_2_year, nearly_3_year, since_this_year, since_establish, establish_date, unknown_1, 
+    custom, service_charge, discount_service_charge, discount, unknown_2
+  </sql>
+  <select id="selectByExample" parameterType="com.lyh.fund.domain.FundDetailInfoExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from fund_detail_info
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from fund_detail_info
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from fund_detail_info
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.lyh.fund.domain.FundDetailInfoExample">
+    delete from fund_detail_info
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.lyh.fund.domain.FundDetailInfo">
+    insert into fund_detail_info (id, fund_code, fund_name, 
+      fund_pinyin, fund_date, net_asset_value, 
+      accumulated_net, daily_grow_rate, nearly_1_week, 
+      nearly_1_month, nearly_3_month, nearly_6_month, 
+      nearly_1_year, nearly_2_year, nearly_3_year, 
+      since_this_year, since_establish, establish_date, 
+      unknown_1, custom, service_charge, 
+      discount_service_charge, discount, unknown_2
+      )
+    values (#{id,jdbcType=INTEGER}, #{fundCode,jdbcType=VARCHAR}, #{fundName,jdbcType=VARCHAR}, 
+      #{fundPinyin,jdbcType=VARCHAR}, #{fundDate,jdbcType=DATE}, #{netAssetValue,jdbcType=DECIMAL}, 
+      #{accumulatedNet,jdbcType=DECIMAL}, #{dailyGrowRate,jdbcType=DECIMAL}, #{nearly1Week,jdbcType=DECIMAL}, 
+      #{nearly1Month,jdbcType=DECIMAL}, #{nearly3Month,jdbcType=DECIMAL}, #{nearly6Month,jdbcType=DECIMAL}, 
+      #{nearly1Year,jdbcType=DECIMAL}, #{nearly2Year,jdbcType=DECIMAL}, #{nearly3Year,jdbcType=DECIMAL}, 
+      #{sinceThisYear,jdbcType=DECIMAL}, #{sinceEstablish,jdbcType=DECIMAL}, #{establishDate,jdbcType=DATE}, 
+      #{unknown1,jdbcType=INTEGER}, #{custom,jdbcType=DECIMAL}, #{serviceCharge,jdbcType=DECIMAL}, 
+      #{discountServiceCharge,jdbcType=DECIMAL}, #{discount,jdbcType=DECIMAL}, #{unknown2,jdbcType=DECIMAL}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.lyh.fund.domain.FundDetailInfo">
+    insert into fund_detail_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="fundCode != null">
+        fund_code,
+      </if>
+      <if test="fundName != null">
+        fund_name,
+      </if>
+      <if test="fundPinyin != null">
+        fund_pinyin,
+      </if>
+      <if test="fundDate != null">
+        fund_date,
+      </if>
+      <if test="netAssetValue != null">
+        net_asset_value,
+      </if>
+      <if test="accumulatedNet != null">
+        accumulated_net,
+      </if>
+      <if test="dailyGrowRate != null">
+        daily_grow_rate,
+      </if>
+      <if test="nearly1Week != null">
+        nearly_1_week,
+      </if>
+      <if test="nearly1Month != null">
+        nearly_1_month,
+      </if>
+      <if test="nearly3Month != null">
+        nearly_3_month,
+      </if>
+      <if test="nearly6Month != null">
+        nearly_6_month,
+      </if>
+      <if test="nearly1Year != null">
+        nearly_1_year,
+      </if>
+      <if test="nearly2Year != null">
+        nearly_2_year,
+      </if>
+      <if test="nearly3Year != null">
+        nearly_3_year,
+      </if>
+      <if test="sinceThisYear != null">
+        since_this_year,
+      </if>
+      <if test="sinceEstablish != null">
+        since_establish,
+      </if>
+      <if test="establishDate != null">
+        establish_date,
+      </if>
+      <if test="unknown1 != null">
+        unknown_1,
+      </if>
+      <if test="custom != null">
+        custom,
+      </if>
+      <if test="serviceCharge != null">
+        service_charge,
+      </if>
+      <if test="discountServiceCharge != null">
+        discount_service_charge,
+      </if>
+      <if test="discount != null">
+        discount,
+      </if>
+      <if test="unknown2 != null">
+        unknown_2,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="fundCode != null">
+        #{fundCode,jdbcType=VARCHAR},
+      </if>
+      <if test="fundName != null">
+        #{fundName,jdbcType=VARCHAR},
+      </if>
+      <if test="fundPinyin != null">
+        #{fundPinyin,jdbcType=VARCHAR},
+      </if>
+      <if test="fundDate != null">
+        #{fundDate,jdbcType=DATE},
+      </if>
+      <if test="netAssetValue != null">
+        #{netAssetValue,jdbcType=DECIMAL},
+      </if>
+      <if test="accumulatedNet != null">
+        #{accumulatedNet,jdbcType=DECIMAL},
+      </if>
+      <if test="dailyGrowRate != null">
+        #{dailyGrowRate,jdbcType=DECIMAL},
+      </if>
+      <if test="nearly1Week != null">
+        #{nearly1Week,jdbcType=DECIMAL},
+      </if>
+      <if test="nearly1Month != null">
+        #{nearly1Month,jdbcType=DECIMAL},
+      </if>
+      <if test="nearly3Month != null">
+        #{nearly3Month,jdbcType=DECIMAL},
+      </if>
+      <if test="nearly6Month != null">
+        #{nearly6Month,jdbcType=DECIMAL},
+      </if>
+      <if test="nearly1Year != null">
+        #{nearly1Year,jdbcType=DECIMAL},
+      </if>
+      <if test="nearly2Year != null">
+        #{nearly2Year,jdbcType=DECIMAL},
+      </if>
+      <if test="nearly3Year != null">
+        #{nearly3Year,jdbcType=DECIMAL},
+      </if>
+      <if test="sinceThisYear != null">
+        #{sinceThisYear,jdbcType=DECIMAL},
+      </if>
+      <if test="sinceEstablish != null">
+        #{sinceEstablish,jdbcType=DECIMAL},
+      </if>
+      <if test="establishDate != null">
+        #{establishDate,jdbcType=DATE},
+      </if>
+      <if test="unknown1 != null">
+        #{unknown1,jdbcType=INTEGER},
+      </if>
+      <if test="custom != null">
+        #{custom,jdbcType=DECIMAL},
+      </if>
+      <if test="serviceCharge != null">
+        #{serviceCharge,jdbcType=DECIMAL},
+      </if>
+      <if test="discountServiceCharge != null">
+        #{discountServiceCharge,jdbcType=DECIMAL},
+      </if>
+      <if test="discount != null">
+        #{discount,jdbcType=DECIMAL},
+      </if>
+      <if test="unknown2 != null">
+        #{unknown2,jdbcType=DECIMAL},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.lyh.fund.domain.FundDetailInfoExample" resultType="java.lang.Long">
+    select count(*) from fund_detail_info
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update fund_detail_info
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.fundCode != null">
+        fund_code = #{record.fundCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.fundName != null">
+        fund_name = #{record.fundName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.fundPinyin != null">
+        fund_pinyin = #{record.fundPinyin,jdbcType=VARCHAR},
+      </if>
+      <if test="record.fundDate != null">
+        fund_date = #{record.fundDate,jdbcType=DATE},
+      </if>
+      <if test="record.netAssetValue != null">
+        net_asset_value = #{record.netAssetValue,jdbcType=DECIMAL},
+      </if>
+      <if test="record.accumulatedNet != null">
+        accumulated_net = #{record.accumulatedNet,jdbcType=DECIMAL},
+      </if>
+      <if test="record.dailyGrowRate != null">
+        daily_grow_rate = #{record.dailyGrowRate,jdbcType=DECIMAL},
+      </if>
+      <if test="record.nearly1Week != null">
+        nearly_1_week = #{record.nearly1Week,jdbcType=DECIMAL},
+      </if>
+      <if test="record.nearly1Month != null">
+        nearly_1_month = #{record.nearly1Month,jdbcType=DECIMAL},
+      </if>
+      <if test="record.nearly3Month != null">
+        nearly_3_month = #{record.nearly3Month,jdbcType=DECIMAL},
+      </if>
+      <if test="record.nearly6Month != null">
+        nearly_6_month = #{record.nearly6Month,jdbcType=DECIMAL},
+      </if>
+      <if test="record.nearly1Year != null">
+        nearly_1_year = #{record.nearly1Year,jdbcType=DECIMAL},
+      </if>
+      <if test="record.nearly2Year != null">
+        nearly_2_year = #{record.nearly2Year,jdbcType=DECIMAL},
+      </if>
+      <if test="record.nearly3Year != null">
+        nearly_3_year = #{record.nearly3Year,jdbcType=DECIMAL},
+      </if>
+      <if test="record.sinceThisYear != null">
+        since_this_year = #{record.sinceThisYear,jdbcType=DECIMAL},
+      </if>
+      <if test="record.sinceEstablish != null">
+        since_establish = #{record.sinceEstablish,jdbcType=DECIMAL},
+      </if>
+      <if test="record.establishDate != null">
+        establish_date = #{record.establishDate,jdbcType=DATE},
+      </if>
+      <if test="record.unknown1 != null">
+        unknown_1 = #{record.unknown1,jdbcType=INTEGER},
+      </if>
+      <if test="record.custom != null">
+        custom = #{record.custom,jdbcType=DECIMAL},
+      </if>
+      <if test="record.serviceCharge != null">
+        service_charge = #{record.serviceCharge,jdbcType=DECIMAL},
+      </if>
+      <if test="record.discountServiceCharge != null">
+        discount_service_charge = #{record.discountServiceCharge,jdbcType=DECIMAL},
+      </if>
+      <if test="record.discount != null">
+        discount = #{record.discount,jdbcType=DECIMAL},
+      </if>
+      <if test="record.unknown2 != null">
+        unknown_2 = #{record.unknown2,jdbcType=DECIMAL},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update fund_detail_info
+    set id = #{record.id,jdbcType=INTEGER},
+      fund_code = #{record.fundCode,jdbcType=VARCHAR},
+      fund_name = #{record.fundName,jdbcType=VARCHAR},
+      fund_pinyin = #{record.fundPinyin,jdbcType=VARCHAR},
+      fund_date = #{record.fundDate,jdbcType=DATE},
+      net_asset_value = #{record.netAssetValue,jdbcType=DECIMAL},
+      accumulated_net = #{record.accumulatedNet,jdbcType=DECIMAL},
+      daily_grow_rate = #{record.dailyGrowRate,jdbcType=DECIMAL},
+      nearly_1_week = #{record.nearly1Week,jdbcType=DECIMAL},
+      nearly_1_month = #{record.nearly1Month,jdbcType=DECIMAL},
+      nearly_3_month = #{record.nearly3Month,jdbcType=DECIMAL},
+      nearly_6_month = #{record.nearly6Month,jdbcType=DECIMAL},
+      nearly_1_year = #{record.nearly1Year,jdbcType=DECIMAL},
+      nearly_2_year = #{record.nearly2Year,jdbcType=DECIMAL},
+      nearly_3_year = #{record.nearly3Year,jdbcType=DECIMAL},
+      since_this_year = #{record.sinceThisYear,jdbcType=DECIMAL},
+      since_establish = #{record.sinceEstablish,jdbcType=DECIMAL},
+      establish_date = #{record.establishDate,jdbcType=DATE},
+      unknown_1 = #{record.unknown1,jdbcType=INTEGER},
+      custom = #{record.custom,jdbcType=DECIMAL},
+      service_charge = #{record.serviceCharge,jdbcType=DECIMAL},
+      discount_service_charge = #{record.discountServiceCharge,jdbcType=DECIMAL},
+      discount = #{record.discount,jdbcType=DECIMAL},
+      unknown_2 = #{record.unknown2,jdbcType=DECIMAL}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.lyh.fund.domain.FundDetailInfo">
+    update fund_detail_info
+    <set>
+      <if test="fundCode != null">
+        fund_code = #{fundCode,jdbcType=VARCHAR},
+      </if>
+      <if test="fundName != null">
+        fund_name = #{fundName,jdbcType=VARCHAR},
+      </if>
+      <if test="fundPinyin != null">
+        fund_pinyin = #{fundPinyin,jdbcType=VARCHAR},
+      </if>
+      <if test="fundDate != null">
+        fund_date = #{fundDate,jdbcType=DATE},
+      </if>
+      <if test="netAssetValue != null">
+        net_asset_value = #{netAssetValue,jdbcType=DECIMAL},
+      </if>
+      <if test="accumulatedNet != null">
+        accumulated_net = #{accumulatedNet,jdbcType=DECIMAL},
+      </if>
+      <if test="dailyGrowRate != null">
+        daily_grow_rate = #{dailyGrowRate,jdbcType=DECIMAL},
+      </if>
+      <if test="nearly1Week != null">
+        nearly_1_week = #{nearly1Week,jdbcType=DECIMAL},
+      </if>
+      <if test="nearly1Month != null">
+        nearly_1_month = #{nearly1Month,jdbcType=DECIMAL},
+      </if>
+      <if test="nearly3Month != null">
+        nearly_3_month = #{nearly3Month,jdbcType=DECIMAL},
+      </if>
+      <if test="nearly6Month != null">
+        nearly_6_month = #{nearly6Month,jdbcType=DECIMAL},
+      </if>
+      <if test="nearly1Year != null">
+        nearly_1_year = #{nearly1Year,jdbcType=DECIMAL},
+      </if>
+      <if test="nearly2Year != null">
+        nearly_2_year = #{nearly2Year,jdbcType=DECIMAL},
+      </if>
+      <if test="nearly3Year != null">
+        nearly_3_year = #{nearly3Year,jdbcType=DECIMAL},
+      </if>
+      <if test="sinceThisYear != null">
+        since_this_year = #{sinceThisYear,jdbcType=DECIMAL},
+      </if>
+      <if test="sinceEstablish != null">
+        since_establish = #{sinceEstablish,jdbcType=DECIMAL},
+      </if>
+      <if test="establishDate != null">
+        establish_date = #{establishDate,jdbcType=DATE},
+      </if>
+      <if test="unknown1 != null">
+        unknown_1 = #{unknown1,jdbcType=INTEGER},
+      </if>
+      <if test="custom != null">
+        custom = #{custom,jdbcType=DECIMAL},
+      </if>
+      <if test="serviceCharge != null">
+        service_charge = #{serviceCharge,jdbcType=DECIMAL},
+      </if>
+      <if test="discountServiceCharge != null">
+        discount_service_charge = #{discountServiceCharge,jdbcType=DECIMAL},
+      </if>
+      <if test="discount != null">
+        discount = #{discount,jdbcType=DECIMAL},
+      </if>
+      <if test="unknown2 != null">
+        unknown_2 = #{unknown2,jdbcType=DECIMAL},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.lyh.fund.domain.FundDetailInfo">
+    update fund_detail_info
+    set fund_code = #{fundCode,jdbcType=VARCHAR},
+      fund_name = #{fundName,jdbcType=VARCHAR},
+      fund_pinyin = #{fundPinyin,jdbcType=VARCHAR},
+      fund_date = #{fundDate,jdbcType=DATE},
+      net_asset_value = #{netAssetValue,jdbcType=DECIMAL},
+      accumulated_net = #{accumulatedNet,jdbcType=DECIMAL},
+      daily_grow_rate = #{dailyGrowRate,jdbcType=DECIMAL},
+      nearly_1_week = #{nearly1Week,jdbcType=DECIMAL},
+      nearly_1_month = #{nearly1Month,jdbcType=DECIMAL},
+      nearly_3_month = #{nearly3Month,jdbcType=DECIMAL},
+      nearly_6_month = #{nearly6Month,jdbcType=DECIMAL},
+      nearly_1_year = #{nearly1Year,jdbcType=DECIMAL},
+      nearly_2_year = #{nearly2Year,jdbcType=DECIMAL},
+      nearly_3_year = #{nearly3Year,jdbcType=DECIMAL},
+      since_this_year = #{sinceThisYear,jdbcType=DECIMAL},
+      since_establish = #{sinceEstablish,jdbcType=DECIMAL},
+      establish_date = #{establishDate,jdbcType=DATE},
+      unknown_1 = #{unknown1,jdbcType=INTEGER},
+      custom = #{custom,jdbcType=DECIMAL},
+      service_charge = #{serviceCharge,jdbcType=DECIMAL},
+      discount_service_charge = #{discountServiceCharge,jdbcType=DECIMAL},
+      discount = #{discount,jdbcType=DECIMAL},
+      unknown_2 = #{unknown2,jdbcType=DECIMAL}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
