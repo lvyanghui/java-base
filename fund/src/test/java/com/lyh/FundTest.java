@@ -18,6 +18,11 @@ public class FundTest {
 
     @Test
     public void insert(){
-        fundService.insertFundDetail();
+        fundService.insertFund();
+    }
+
+    @Test
+    public void getFund(){
+        fundService.getFunds();
     }
 }

@@ -10,18 +10,18 @@ import org.springframework.web.bind.annotation.RestController;
  * 2021/9/6 21:29
  */
 @RestController
-public class HelloController {
+public class FundController {
 
     @Autowired
     FundService service;
 
-    @RequestMapping("/hello")
-    public String hello(String param){
-        return "hello " + param;
+    @RequestMapping("/getFund")
+    public String getFund(){
+        return service.getFunds();
     }
 
-    @RequestMapping("/fund")
-    public void getFund(){
-        service.insertFundDetail();
+    @RequestMapping("/addFund")
+    public String addFund(){
+        return service.insertFund();
     }
 }

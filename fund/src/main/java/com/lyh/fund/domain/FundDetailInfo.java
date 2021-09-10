@@ -243,4 +243,34 @@ public class FundDetailInfo {
     public void setUnknown2(BigDecimal unknown2) {
         this.unknown2 = unknown2;
     }
+
+    @Override
+    public String toString() {
+        return "FundDetailInfo{" +
+                "id=" + id +
+                ", fundCode='" + fundCode + '\'' +
+                ", fundName='" + fundName + '\'' +
+                ", fundPinyin='" + fundPinyin + '\'' +
+                ", fundDate=" + fundDate +
+                ", netAssetValue=" + netAssetValue +
+                ", accumulatedNet=" + accumulatedNet +
+                ", dailyGrowRate=" + dailyGrowRate +
+                ", nearly1Week=" + nearly1Week +
+                ", nearly1Month=" + nearly1Month +
+                ", nearly3Month=" + nearly3Month +
+                ", nearly6Month=" + nearly6Month +
+                ", nearly1Year=" + nearly1Year +
+                ", nearly2Year=" + nearly2Year +
+                ", nearly3Year=" + nearly3Year +
+                ", sinceThisYear=" + sinceThisYear +
+                ", sinceEstablish=" + sinceEstablish +
+                ", establishDate=" + establishDate +
+                ", unknown1=" + unknown1 +
+                ", custom=" + custom +
+                ", serviceCharge=" + serviceCharge +
+                ", discountServiceCharge=" + discountServiceCharge +
+                ", discount=" + discount +
+                ", unknown2=" + unknown2 +
+                '}';
+    }
 }
