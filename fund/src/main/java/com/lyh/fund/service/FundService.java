@@ -18,6 +18,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -91,6 +92,7 @@ public class FundService {
         }else{
             FundDetailInfo detailInfo = infoList.get(0);
             BeanUtils.copyProperties(info,detailInfo,"id");
+            detailInfo.setUpdateTime(new Date());
             fundDetailInfoMapper.updateByPrimaryKeySelective(detailInfo);
         }
     }
