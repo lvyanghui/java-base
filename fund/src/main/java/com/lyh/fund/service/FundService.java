@@ -3,6 +3,9 @@ package com.lyh.fund.service;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.lyh.fund.domain.FundDetailInfo;
 import com.lyh.fund.domain.FundDetailInfoExample;
 import com.lyh.fund.domain.ResultData;
@@ -17,11 +20,13 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.client.RestTemplate;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 import static com.lyh.fund.utils.ToolUtils.getBigDecimal;
 import static com.lyh.fund.utils.ToolUtils.getDate;
@@ -134,5 +139,161 @@ public class FundService {
         info.setNearly5YearGrowRate(getBigDecimal(split[24]));
 
         return info;
+    }
+
+    public PageInfo<FundDetailInfo> queryFundsByPage(){
+
+        Page page = PageHelper.startPage(1, 10);
+        FundDetailInfoExample example = new FundDetailInfoExample();
+        example.setOrderByClause("id asc");
+        List<FundDetailInfo> infoList = fundDetailInfoMapper.selectByExample(example);
+        PageInfo<FundDetailInfo> pageInfo = new PageInfo<>(infoList);
+        System.out.println(page.getPages());
+        System.out.println(page.getTotal());
+        return pageInfo;
+    }
+
+
+    private int getLimit(FundDetailInfoExample example,int divisor){
+        long count = fundDetailInfoMapper.countByExample(example);
+        return (int)(count / divisor);
+    }
+
+    private BigDecimal get1YearMin(){
+        FundDetailInfoExample example = new FundDetailInfoExample();
+        example.createCriteria().andNearly1YearGrowRateIsNotNull();
+        int limit = getLimit(example,4);
+        System.out.println("1Year limit " + limit);
+        PageHelper.startPage(1, limit);
+        example.setOrderByClause("nearly_1_year_grow_rate desc");
+        List<FundDetailInfo> infoList = fundDetailInfoMapper.selectByExample(example);
+        return infoList.get(infoList.size() - 1).getNearly1YearGrowRate();
+    }
+
+    public List<String> get1YearCode(){
+        BigDecimal min = get1YearMin();
+        System.out.println("1Year min " + min);
+        FundDetailInfoExample example = new FundDetailInfoExample();
+        example.createCriteria().andNearly1YearGrowRateGreaterThanOrEqualTo(min);
+        List<FundDetailInfo> infoList = fundDetailInfoMapper.selectByExample(example);
+        List<String> collect = infoList.stream().map(FundDetailInfo::getFundCode).collect(Collectors.toList());
+        return collect;
+    }
+
+    private BigDecimal get2YearMin(){
+        FundDetailInfoExample example = new FundDetailInfoExample();
+        example.createCriteria().andNearly2YearGrowRateIsNotNull();
+        int limit = getLimit(example,4);
+        System.out.println("2Year limit " + limit);
+        PageHelper.startPage(1, limit);
+        example.setOrderByClause("nearly_2_year_grow_rate desc");
+        List<FundDetailInfo> infoList = fundDetailInfoMapper.selectByExample(example);
+        return infoList.get(infoList.size() - 1).getNearly2YearGrowRate();
+    }
+
+    public List<String> get2YearCode(){
+        BigDecimal min = get2YearMin();
+        System.out.println("2Year min " + min);
+        FundDetailInfoExample example = new FundDetailInfoExample();
+        example.createCriteria().andNearly2YearGrowRateGreaterThanOrEqualTo(min);
+        List<FundDetailInfo> infoList = fundDetailInfoMapper.selectByExample(example);
+        List<String> collect = infoList.stream().map(FundDetailInfo::getFundCode).collect(Collectors.toList());
+        return collect;
+    }
+
+    private BigDecimal get3YearMin(){
+        FundDetailInfoExample example = new FundDetailInfoExample();
+        example.createCriteria().andNearly3YearGrowRateIsNotNull();
+        int limit = getLimit(example,4);
+        System.out.println("3Year limit " + limit);
+        PageHelper.startPage(1, limit);
+        example.setOrderByClause("nearly_3_year_grow_rate desc");
+        List<FundDetailInfo> infoList = fundDetailInfoMapper.selectByExample(example);
+        return infoList.get(infoList.size() - 1).getNearly3YearGrowRate();
+    }
+
+    public List<String> get3YearCode(){
+        BigDecimal min = get3YearMin();
+        System.out.println("3Year min " + min);
+        FundDetailInfoExample example = new FundDetailInfoExample();
+        example.createCriteria().andNearly3YearGrowRateGreaterThanOrEqualTo(min);
+        List<FundDetailInfo> infoList = fundDetailInfoMapper.selectByExample(example);
+        List<String> collect = infoList.stream().map(FundDetailInfo::getFundCode).collect(Collectors.toList());
+        return collect;
+    }
+
+    private BigDecimal get5YearMin(){
+        FundDetailInfoExample example = new FundDetailInfoExample();
+        example.createCriteria().andNearly5YearGrowRateIsNotNull();
+        int limit = getLimit(example,4);
+        System.out.println("5Year limit " + limit);
+        PageHelper.startPage(1, limit);
+        example.setOrderByClause("nearly_5_year_grow_rate desc");
+        List<FundDetailInfo> infoList = fundDetailInfoMapper.selectByExample(example);
+        return infoList.get(infoList.size() - 1).getNearly5YearGrowRate();
+    }
+
+    public List<String> get5YearCode(){
+        BigDecimal min = get5YearMin();
+        System.out.println("5Year min " + min);
+        FundDetailInfoExample example = new FundDetailInfoExample();
+        example.createCriteria().andNearly5YearGrowRateGreaterThanOrEqualTo(min);
+        List<FundDetailInfo> infoList = fundDetailInfoMapper.selectByExample(example);
+        List<String> collect = infoList.stream().map(FundDetailInfo::getFundCode).collect(Collectors.toList());
+        return collect;
+    }
+
+    private BigDecimal get3MonthMin(){
+        FundDetailInfoExample example = new FundDetailInfoExample();
+        example.createCriteria().andNearly3MonthGrowRateIsNotNull();
+        int limit = getLimit(example,3);
+        System.out.println("3Month limit " + limit);
+        PageHelper.startPage(1, limit);
+        example.setOrderByClause("nearly_3_month_grow_rate desc");
+        List<FundDetailInfo> infoList = fundDetailInfoMapper.selectByExample(example);
+        return infoList.get(infoList.size() - 1).getNearly3MonthGrowRate();
+    }
+
+    public List<String> get3MonthCode(){
+        BigDecimal min = get3MonthMin();
+        System.out.println("3Month min " + min);
+        FundDetailInfoExample example = new FundDetailInfoExample();
+        example.createCriteria().andNearly3MonthGrowRateGreaterThanOrEqualTo(min);
+        List<FundDetailInfo> infoList = fundDetailInfoMapper.selectByExample(example);
+        List<String> collect = infoList.stream().map(FundDetailInfo::getFundCode).collect(Collectors.toList());
+        return collect;
+    }
+
+    private BigDecimal get6MonthMin(){
+        FundDetailInfoExample example = new FundDetailInfoExample();
+        example.createCriteria().andNearly6MonthGrowRateIsNotNull();
+        int limit = getLimit(example,3);
+        System.out.println("6Month limit " + limit);
+        PageHelper.startPage(1, limit);
+        example.setOrderByClause("nearly_6_month_grow_rate desc");
+        List<FundDetailInfo> infoList = fundDetailInfoMapper.selectByExample(example);
+        return infoList.get(infoList.size() - 1).getNearly6MonthGrowRate();
+    }
+
+    public List<String> get6MonthCode(){
+        BigDecimal min = get6MonthMin();
+        System.out.println("6Month min " + min);
+        FundDetailInfoExample example = new FundDetailInfoExample();
+        example.createCriteria().andNearly6MonthGrowRateGreaterThanOrEqualTo(min);
+        List<FundDetailInfo> infoList = fundDetailInfoMapper.selectByExample(example);
+        List<String> collect = infoList.stream().map(FundDetailInfo::getFundCode).collect(Collectors.toList());
+        return collect;
+    }
+
+    //按照4433法则计算排名靠前的基金
+    public List<String> getCode(){
+        List<String> codes = get1YearCode();
+        codes.retainAll(get2YearCode());
+        codes.retainAll(get3YearCode());
+        codes.retainAll(get5YearCode());
+        codes.retainAll(get3MonthCode());
+        codes.retainAll(get6MonthCode());
+
+        return codes;
     }
 }

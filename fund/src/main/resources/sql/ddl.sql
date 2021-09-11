@@ -50,5 +50,34 @@ CREATE TABLE `fund_detail_info` (
 4.近6个月业绩排名在同类基金中位列前1/3。
  */
 
-SELECT COUNT(*) FROM fund_detail_info;
-SELECT * FROM fund_detail_info WHERE nearly_1_year_grow_rate IS NOT NULL ORDER BY nearly_1_year_grow_rate DESC LIMIT 0,2211;
+SELECT COUNT(id) FROM fund_detail_info;
+
+--1年 limit上面sql的值，大于等于取上面sql的值
+SELECT (SELECT COUNT(id) FROM fund_detail_info WHERE nearly_1_year_grow_rate IS NOT NULL)/4;
+SELECT MIN(a.nearly_1_year_grow_rate) FROM (SELECT * FROM fund_detail_info WHERE nearly_1_year_grow_rate IS NOT NULL ORDER BY nearly_1_year_grow_rate DESC LIMIT 1725) a;
+SELECT fund_code FROM fund_detail_info WHERE nearly_1_year_grow_rate >= 26.6500;
+
+--2年 limit上面sql的值，大于等于取上面sql的值
+SELECT (SELECT COUNT(id) FROM fund_detail_info WHERE nearly_2_year_grow_rate IS NOT NULL)/4;
+SELECT MIN(a.nearly_2_year_grow_rate) FROM (SELECT * FROM fund_detail_info WHERE nearly_2_year_grow_rate IS NOT NULL ORDER BY nearly_2_year_grow_rate DESC LIMIT 1368) a;
+SELECT fund_code FROM fund_detail_info WHERE nearly_2_year_grow_rate >= 78.2000;
+
+--3年 limit上面sql的值，大于等于取上面sql的值
+SELECT (SELECT COUNT(id) FROM fund_detail_info WHERE nearly_3_year_grow_rate IS NOT NULL)/4;
+SELECT MIN(a.nearly_3_year_grow_rate) FROM (SELECT * FROM fund_detail_info WHERE nearly_3_year_grow_rate IS NOT NULL ORDER BY nearly_3_year_grow_rate DESC LIMIT 1119) a;
+SELECT fund_code FROM fund_detail_info WHERE nearly_3_year_grow_rate >= 125.3600;
+
+--5年 limit上面sql的值，大于等于取上面sql的值
+SELECT (SELECT COUNT(id) FROM fund_detail_info WHERE nearly_5_year_grow_rate IS NOT NULL)/4;
+SELECT MIN(a.nearly_5_year_grow_rate) FROM (SELECT * FROM fund_detail_info WHERE nearly_5_year_grow_rate IS NOT NULL ORDER BY nearly_5_year_grow_rate DESC LIMIT 704) a;
+SELECT fund_code FROM fund_detail_info WHERE nearly_5_year_grow_rate >= 115.3000;
+
+--3月 limit上面sql的值，大于等于取上面sql的值
+SELECT (SELECT COUNT(id) FROM fund_detail_info WHERE nearly_3_month_grow_rate IS NOT NULL)/3;
+SELECT MIN(a.nearly_3_month_grow_rate) FROM (SELECT * FROM fund_detail_info WHERE nearly_3_month_grow_rate IS NOT NULL ORDER BY nearly_3_month_grow_rate DESC LIMIT 2807) a;
+SELECT fund_code FROM fund_detail_info WHERE nearly_3_month_grow_rate >= 3.7500;
+
+--6月 limit上面sql的值，大于等于取上面sql的值
+SELECT (SELECT COUNT(id) FROM fund_detail_info WHERE nearly_6_month_grow_rate IS NOT NULL)/3;
+SELECT MIN(a.nearly_6_month_grow_rate) FROM (SELECT * FROM fund_detail_info WHERE nearly_6_month_grow_rate IS NOT NULL ORDER BY nearly_6_month_grow_rate DESC LIMIT 2626) a;
+SELECT fund_code FROM fund_detail_info WHERE nearly_6_month_grow_rate >= 11.1600;
