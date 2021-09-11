@@ -45,13 +45,20 @@ public class FundService {
 
     public String getFunds(){
         //4. 设置header的Get请求
-        String url = "http://fund.eastmoney.com/data/rankhandler.aspx?op=ph&dt=kf&ft=all&rs=&gs=0&sc=lnzf&st=desc&sd=2019-12-10&ed=2020-12-10&qdii=&tabSubtype=,,,,,&pi=1&pn=10000&dx=1&v=0.17771342305527527";
+        String all = "http://fund.eastmoney.com/data/rankhandler.aspx?op=ph&dt=kf&ft=all&rs=&gs=0&sc=lnzf&st=desc&sd=2019-12-10&ed=2020-12-10&qdii=&tabSubtype=,,,,,&pi=1&pn=10000&dx=1&v=0.17771342305527527";
+        String gp = "http://fund.eastmoney.com/data/rankhandler.aspx?op=ph&dt=kf&ft=gp&rs=&gs=0&sc=lnzf&st=desc&sd=2019-12-10&ed=2020-12-10&qdii=&tabSubtype=,,,,,&pi=1&pn=10000&dx=1&v=0.7484586769252701";
+        String hh = "http://fund.eastmoney.com/data/rankhandler.aspx?op=ph&dt=kf&ft=hh&rs=&gs=0&sc=lnzf&st=desc&sd=2019-12-10&ed=2020-12-10&qdii=&tabSubtype=,,,,,&pi=1&pn=10000&dx=1&v=0.9177684847271779";
+        String zq = "http://fund.eastmoney.com/data/rankhandler.aspx?op=ph&dt=kf&ft=zq&rs=&gs=0&sc=lnzf&st=desc&sd=2019-12-10&ed=2020-12-10&qdii=|&tabSubtype=,,,,,&pi=1&pn=10000&dx=1&v=0.6739977870119034";
+        String zs = "http://fund.eastmoney.com/data/rankhandler.aspx?op=ph&dt=kf&ft=zs&rs=&gs=0&sc=lnzf&st=desc&sd=2019-12-10&ed=2020-12-10&qdii=|&tabSubtype=,,,,,&pi=1&pn=10000&dx=1&v=0.05849205757584319";
+        String qdii = "http://fund.eastmoney.com/data/rankhandler.aspx?op=ph&dt=kf&ft=qdii&rs=&gs=0&sc=lnzf&st=desc&sd=2019-12-10&ed=2020-12-10&qdii=&tabSubtype=,,,,,&pi=1&pn=10000&dx=1&v=0.310210851784956";
+        String lof = "http://fund.eastmoney.com/data/rankhandler.aspx?op=ph&dt=kf&ft=lof&rs=&gs=0&sc=lnzf&st=desc&sd=2019-12-10&ed=2020-12-10&qdii=&tabSubtype=,,,,,&pi=1&pn=10000&dx=1&v=0.1347115704917503";
+        String fof = "http://fund.eastmoney.com/data/rankhandler.aspx?op=ph&dt=kf&ft=fof&rs=&gs=0&sc=lnzf&st=desc&sd=2019-12-10&ed=2020-12-10&qdii=&tabSubtype=,,,,,&pi=1&pn=10000&dx=1&v=0.8594913765963186";
         HttpHeaders headers = new HttpHeaders();
 
         headers.add("Host","fund.eastmoney.com");
         headers.add("Referer","http://fund.eastmoney.com/data/fundranking.html");
         headers.add("User-Agent","Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36");
-        ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.GET, new HttpEntity<String>(headers), String.class);
+        ResponseEntity<String> response = restTemplate.exchange(all, HttpMethod.GET, new HttpEntity<String>(headers), String.class);
 
         return response.getBody();
 
