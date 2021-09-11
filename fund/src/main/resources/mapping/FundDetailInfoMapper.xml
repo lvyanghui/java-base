@@ -10,21 +10,31 @@
     <result column="net_asset_value" jdbcType="DECIMAL" property="netAssetValue" />
     <result column="accumulated_net" jdbcType="DECIMAL" property="accumulatedNet" />
     <result column="daily_grow_rate" jdbcType="DECIMAL" property="dailyGrowRate" />
-    <result column="nearly_1_week" jdbcType="DECIMAL" property="nearly1Week" />
-    <result column="nearly_1_month" jdbcType="DECIMAL" property="nearly1Month" />
-    <result column="nearly_3_month" jdbcType="DECIMAL" property="nearly3Month" />
-    <result column="nearly_6_month" jdbcType="DECIMAL" property="nearly6Month" />
-    <result column="nearly_1_year" jdbcType="DECIMAL" property="nearly1Year" />
-    <result column="nearly_2_year" jdbcType="DECIMAL" property="nearly2Year" />
-    <result column="nearly_3_year" jdbcType="DECIMAL" property="nearly3Year" />
-    <result column="since_this_year" jdbcType="DECIMAL" property="sinceThisYear" />
-    <result column="since_establish" jdbcType="DECIMAL" property="sinceEstablish" />
+    <result column="nearly_1_week_grow_rate" jdbcType="DECIMAL" property="nearly1WeekGrowRate" />
+    <result column="nearly_1_month_grow_rate" jdbcType="DECIMAL" property="nearly1MonthGrowRate" />
+    <result column="nearly_3_month_grow_rate" jdbcType="DECIMAL" property="nearly3MonthGrowRate" />
+    <result column="nearly_6_month_grow_rate" jdbcType="DECIMAL" property="nearly6MonthGrowRate" />
+    <result column="nearly_1_year_grow_rate" jdbcType="DECIMAL" property="nearly1YearGrowRate" />
+    <result column="nearly_2_year_grow_rate" jdbcType="DECIMAL" property="nearly2YearGrowRate" />
+    <result column="nearly_3_year_grow_rate" jdbcType="DECIMAL" property="nearly3YearGrowRate" />
+    <result column="since_this_year_grow_rate" jdbcType="DECIMAL" property="sinceThisYearGrowRate" />
+    <result column="since_establish_grow_rate" jdbcType="DECIMAL" property="sinceEstablishGrowRate" />
+    <result column="nearly_1_year_wave_rate" jdbcType="DECIMAL" property="nearly1YearWaveRate" />
+    <result column="nearly_2_year_wave_rate" jdbcType="DECIMAL" property="nearly2YearWaveRate" />
+    <result column="nearly_3_year_wave_rate" jdbcType="DECIMAL" property="nearly3YearWaveRate" />
+    <result column="nearly_1_year_sharp_rate" jdbcType="DECIMAL" property="nearly1YearSharpRate" />
+    <result column="nearly_2_year_sharp_rate" jdbcType="DECIMAL" property="nearly2YearSharpRate" />
+    <result column="nearly_3_year_sharp_rate" jdbcType="DECIMAL" property="nearly3YearSharpRate" />
     <result column="establish_date" jdbcType="DATE" property="establishDate" />
+    <result column="fund_manager" jdbcType="VARCHAR" property="fundManager" />
+    <result column="manager_start_date" jdbcType="DATE" property="managerStartDate" />
+    <result column="previous_fund_manager" jdbcType="VARCHAR" property="previousFundManager" />
+    <result column="previous_manager_start_date" jdbcType="DATE" property="previousManagerStartDate" />
     <result column="unknown_1" jdbcType="INTEGER" property="unknown1" />
     <result column="custom" jdbcType="DECIMAL" property="custom" />
-    <result column="service_charge" jdbcType="DECIMAL" property="serviceCharge" />
-    <result column="discount_service_charge" jdbcType="DECIMAL" property="discountServiceCharge" />
-    <result column="discount" jdbcType="DECIMAL" property="discount" />
+    <result column="service_charge_rate" jdbcType="DECIMAL" property="serviceChargeRate" />
+    <result column="discount_service_charge_rate" jdbcType="DECIMAL" property="discountServiceChargeRate" />
+    <result column="discount_rate" jdbcType="DECIMAL" property="discountRate" />
     <result column="unknown_2" jdbcType="DECIMAL" property="unknown2" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
@@ -89,10 +99,13 @@
   </sql>
   <sql id="Base_Column_List">
     id, fund_code, fund_name, fund_pinyin, fund_date, net_asset_value, accumulated_net, 
-    daily_grow_rate, nearly_1_week, nearly_1_month, nearly_3_month, nearly_6_month, nearly_1_year, 
-    nearly_2_year, nearly_3_year, since_this_year, since_establish, establish_date, unknown_1, 
-    custom, service_charge, discount_service_charge, discount, unknown_2, create_time, 
-    update_time
+    daily_grow_rate, nearly_1_week_grow_rate, nearly_1_month_grow_rate, nearly_3_month_grow_rate, 
+    nearly_6_month_grow_rate, nearly_1_year_grow_rate, nearly_2_year_grow_rate, nearly_3_year_grow_rate, 
+    since_this_year_grow_rate, since_establish_grow_rate, nearly_1_year_wave_rate, nearly_2_year_wave_rate, 
+    nearly_3_year_wave_rate, nearly_1_year_sharp_rate, nearly_2_year_sharp_rate, nearly_3_year_sharp_rate, 
+    establish_date, fund_manager, manager_start_date, previous_fund_manager, previous_manager_start_date, 
+    unknown_1, custom, service_charge_rate, discount_service_charge_rate, discount_rate, 
+    unknown_2, create_time, update_time
   </sql>
   <select id="selectByExample" parameterType="com.lyh.fund.domain.FundDetailInfoExample" resultMap="BaseResultMap">
     select
@@ -127,22 +140,36 @@
   <insert id="insert" parameterType="com.lyh.fund.domain.FundDetailInfo">
     insert into fund_detail_info (id, fund_code, fund_name, 
       fund_pinyin, fund_date, net_asset_value, 
-      accumulated_net, daily_grow_rate, nearly_1_week, 
-      nearly_1_month, nearly_3_month, nearly_6_month, 
-      nearly_1_year, nearly_2_year, nearly_3_year, 
-      since_this_year, since_establish, establish_date, 
-      unknown_1, custom, service_charge, 
-      discount_service_charge, discount, unknown_2, 
-      create_time, update_time)
+      accumulated_net, daily_grow_rate, nearly_1_week_grow_rate, 
+      nearly_1_month_grow_rate, nearly_3_month_grow_rate, 
+      nearly_6_month_grow_rate, nearly_1_year_grow_rate, 
+      nearly_2_year_grow_rate, nearly_3_year_grow_rate, 
+      since_this_year_grow_rate, since_establish_grow_rate, 
+      nearly_1_year_wave_rate, nearly_2_year_wave_rate, 
+      nearly_3_year_wave_rate, nearly_1_year_sharp_rate, 
+      nearly_2_year_sharp_rate, nearly_3_year_sharp_rate, 
+      establish_date, fund_manager, manager_start_date, 
+      previous_fund_manager, previous_manager_start_date, 
+      unknown_1, custom, service_charge_rate, 
+      discount_service_charge_rate, discount_rate, 
+      unknown_2, create_time, update_time
+      )
     values (#{id,jdbcType=INTEGER}, #{fundCode,jdbcType=VARCHAR}, #{fundName,jdbcType=VARCHAR}, 
       #{fundPinyin,jdbcType=VARCHAR}, #{fundDate,jdbcType=DATE}, #{netAssetValue,jdbcType=DECIMAL}, 
-      #{accumulatedNet,jdbcType=DECIMAL}, #{dailyGrowRate,jdbcType=DECIMAL}, #{nearly1Week,jdbcType=DECIMAL}, 
-      #{nearly1Month,jdbcType=DECIMAL}, #{nearly3Month,jdbcType=DECIMAL}, #{nearly6Month,jdbcType=DECIMAL}, 
-      #{nearly1Year,jdbcType=DECIMAL}, #{nearly2Year,jdbcType=DECIMAL}, #{nearly3Year,jdbcType=DECIMAL}, 
-      #{sinceThisYear,jdbcType=DECIMAL}, #{sinceEstablish,jdbcType=DECIMAL}, #{establishDate,jdbcType=DATE}, 
-      #{unknown1,jdbcType=INTEGER}, #{custom,jdbcType=DECIMAL}, #{serviceCharge,jdbcType=DECIMAL}, 
-      #{discountServiceCharge,jdbcType=DECIMAL}, #{discount,jdbcType=DECIMAL}, #{unknown2,jdbcType=DECIMAL}, 
-      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP})
+      #{accumulatedNet,jdbcType=DECIMAL}, #{dailyGrowRate,jdbcType=DECIMAL}, #{nearly1WeekGrowRate,jdbcType=DECIMAL}, 
+      #{nearly1MonthGrowRate,jdbcType=DECIMAL}, #{nearly3MonthGrowRate,jdbcType=DECIMAL}, 
+      #{nearly6MonthGrowRate,jdbcType=DECIMAL}, #{nearly1YearGrowRate,jdbcType=DECIMAL}, 
+      #{nearly2YearGrowRate,jdbcType=DECIMAL}, #{nearly3YearGrowRate,jdbcType=DECIMAL}, 
+      #{sinceThisYearGrowRate,jdbcType=DECIMAL}, #{sinceEstablishGrowRate,jdbcType=DECIMAL}, 
+      #{nearly1YearWaveRate,jdbcType=DECIMAL}, #{nearly2YearWaveRate,jdbcType=DECIMAL}, 
+      #{nearly3YearWaveRate,jdbcType=DECIMAL}, #{nearly1YearSharpRate,jdbcType=DECIMAL}, 
+      #{nearly2YearSharpRate,jdbcType=DECIMAL}, #{nearly3YearSharpRate,jdbcType=DECIMAL}, 
+      #{establishDate,jdbcType=DATE}, #{fundManager,jdbcType=VARCHAR}, #{managerStartDate,jdbcType=DATE}, 
+      #{previousFundManager,jdbcType=VARCHAR}, #{previousManagerStartDate,jdbcType=DATE}, 
+      #{unknown1,jdbcType=INTEGER}, #{custom,jdbcType=DECIMAL}, #{serviceChargeRate,jdbcType=DECIMAL}, 
+      #{discountServiceChargeRate,jdbcType=DECIMAL}, #{discountRate,jdbcType=DECIMAL}, 
+      #{unknown2,jdbcType=DECIMAL}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}
+      )
   </insert>
   <insert id="insertSelective" parameterType="com.lyh.fund.domain.FundDetailInfo">
     insert into fund_detail_info
@@ -171,35 +198,65 @@
       <if test="dailyGrowRate != null">
         daily_grow_rate,
       </if>
-      <if test="nearly1Week != null">
-        nearly_1_week,
+      <if test="nearly1WeekGrowRate != null">
+        nearly_1_week_grow_rate,
       </if>
-      <if test="nearly1Month != null">
-        nearly_1_month,
+      <if test="nearly1MonthGrowRate != null">
+        nearly_1_month_grow_rate,
       </if>
-      <if test="nearly3Month != null">
-        nearly_3_month,
+      <if test="nearly3MonthGrowRate != null">
+        nearly_3_month_grow_rate,
       </if>
-      <if test="nearly6Month != null">
-        nearly_6_month,
+      <if test="nearly6MonthGrowRate != null">
+        nearly_6_month_grow_rate,
       </if>
-      <if test="nearly1Year != null">
-        nearly_1_year,
+      <if test="nearly1YearGrowRate != null">
+        nearly_1_year_grow_rate,
       </if>
-      <if test="nearly2Year != null">
-        nearly_2_year,
+      <if test="nearly2YearGrowRate != null">
+        nearly_2_year_grow_rate,
       </if>
-      <if test="nearly3Year != null">
-        nearly_3_year,
+      <if test="nearly3YearGrowRate != null">
+        nearly_3_year_grow_rate,
       </if>
-      <if test="sinceThisYear != null">
-        since_this_year,
+      <if test="sinceThisYearGrowRate != null">
+        since_this_year_grow_rate,
       </if>
-      <if test="sinceEstablish != null">
-        since_establish,
+      <if test="sinceEstablishGrowRate != null">
+        since_establish_grow_rate,
+      </if>
+      <if test="nearly1YearWaveRate != null">
+        nearly_1_year_wave_rate,
+      </if>
+      <if test="nearly2YearWaveRate != null">
+        nearly_2_year_wave_rate,
+      </if>
+      <if test="nearly3YearWaveRate != null">
+        nearly_3_year_wave_rate,
+      </if>
+      <if test="nearly1YearSharpRate != null">
+        nearly_1_year_sharp_rate,
+      </if>
+      <if test="nearly2YearSharpRate != null">
+        nearly_2_year_sharp_rate,
+      </if>
+      <if test="nearly3YearSharpRate != null">
+        nearly_3_year_sharp_rate,
       </if>
       <if test="establishDate != null">
         establish_date,
+      </if>
+      <if test="fundManager != null">
+        fund_manager,
+      </if>
+      <if test="managerStartDate != null">
+        manager_start_date,
+      </if>
+      <if test="previousFundManager != null">
+        previous_fund_manager,
+      </if>
+      <if test="previousManagerStartDate != null">
+        previous_manager_start_date,
       </if>
       <if test="unknown1 != null">
         unknown_1,
@@ -207,14 +264,14 @@
       <if test="custom != null">
         custom,
       </if>
-      <if test="serviceCharge != null">
-        service_charge,
+      <if test="serviceChargeRate != null">
+        service_charge_rate,
       </if>
-      <if test="discountServiceCharge != null">
-        discount_service_charge,
+      <if test="discountServiceChargeRate != null">
+        discount_service_charge_rate,
       </if>
-      <if test="discount != null">
-        discount,
+      <if test="discountRate != null">
+        discount_rate,
       </if>
       <if test="unknown2 != null">
         unknown_2,
@@ -251,35 +308,65 @@
       <if test="dailyGrowRate != null">
         #{dailyGrowRate,jdbcType=DECIMAL},
       </if>
-      <if test="nearly1Week != null">
-        #{nearly1Week,jdbcType=DECIMAL},
+      <if test="nearly1WeekGrowRate != null">
+        #{nearly1WeekGrowRate,jdbcType=DECIMAL},
       </if>
-      <if test="nearly1Month != null">
-        #{nearly1Month,jdbcType=DECIMAL},
+      <if test="nearly1MonthGrowRate != null">
+        #{nearly1MonthGrowRate,jdbcType=DECIMAL},
       </if>
-      <if test="nearly3Month != null">
-        #{nearly3Month,jdbcType=DECIMAL},
+      <if test="nearly3MonthGrowRate != null">
+        #{nearly3MonthGrowRate,jdbcType=DECIMAL},
       </if>
-      <if test="nearly6Month != null">
-        #{nearly6Month,jdbcType=DECIMAL},
+      <if test="nearly6MonthGrowRate != null">
+        #{nearly6MonthGrowRate,jdbcType=DECIMAL},
       </if>
-      <if test="nearly1Year != null">
-        #{nearly1Year,jdbcType=DECIMAL},
+      <if test="nearly1YearGrowRate != null">
+        #{nearly1YearGrowRate,jdbcType=DECIMAL},
       </if>
-      <if test="nearly2Year != null">
-        #{nearly2Year,jdbcType=DECIMAL},
+      <if test="nearly2YearGrowRate != null">
+        #{nearly2YearGrowRate,jdbcType=DECIMAL},
       </if>
-      <if test="nearly3Year != null">
-        #{nearly3Year,jdbcType=DECIMAL},
+      <if test="nearly3YearGrowRate != null">
+        #{nearly3YearGrowRate,jdbcType=DECIMAL},
       </if>
-      <if test="sinceThisYear != null">
-        #{sinceThisYear,jdbcType=DECIMAL},
+      <if test="sinceThisYearGrowRate != null">
+        #{sinceThisYearGrowRate,jdbcType=DECIMAL},
       </if>
-      <if test="sinceEstablish != null">
-        #{sinceEstablish,jdbcType=DECIMAL},
+      <if test="sinceEstablishGrowRate != null">
+        #{sinceEstablishGrowRate,jdbcType=DECIMAL},
+      </if>
+      <if test="nearly1YearWaveRate != null">
+        #{nearly1YearWaveRate,jdbcType=DECIMAL},
+      </if>
+      <if test="nearly2YearWaveRate != null">
+        #{nearly2YearWaveRate,jdbcType=DECIMAL},
+      </if>
+      <if test="nearly3YearWaveRate != null">
+        #{nearly3YearWaveRate,jdbcType=DECIMAL},
+      </if>
+      <if test="nearly1YearSharpRate != null">
+        #{nearly1YearSharpRate,jdbcType=DECIMAL},
+      </if>
+      <if test="nearly2YearSharpRate != null">
+        #{nearly2YearSharpRate,jdbcType=DECIMAL},
+      </if>
+      <if test="nearly3YearSharpRate != null">
+        #{nearly3YearSharpRate,jdbcType=DECIMAL},
       </if>
       <if test="establishDate != null">
         #{establishDate,jdbcType=DATE},
+      </if>
+      <if test="fundManager != null">
+        #{fundManager,jdbcType=VARCHAR},
+      </if>
+      <if test="managerStartDate != null">
+        #{managerStartDate,jdbcType=DATE},
+      </if>
+      <if test="previousFundManager != null">
+        #{previousFundManager,jdbcType=VARCHAR},
+      </if>
+      <if test="previousManagerStartDate != null">
+        #{previousManagerStartDate,jdbcType=DATE},
       </if>
       <if test="unknown1 != null">
         #{unknown1,jdbcType=INTEGER},
@@ -287,14 +374,14 @@
       <if test="custom != null">
         #{custom,jdbcType=DECIMAL},
       </if>
-      <if test="serviceCharge != null">
-        #{serviceCharge,jdbcType=DECIMAL},
+      <if test="serviceChargeRate != null">
+        #{serviceChargeRate,jdbcType=DECIMAL},
       </if>
-      <if test="discountServiceCharge != null">
-        #{discountServiceCharge,jdbcType=DECIMAL},
+      <if test="discountServiceChargeRate != null">
+        #{discountServiceChargeRate,jdbcType=DECIMAL},
       </if>
-      <if test="discount != null">
-        #{discount,jdbcType=DECIMAL},
+      <if test="discountRate != null">
+        #{discountRate,jdbcType=DECIMAL},
       </if>
       <if test="unknown2 != null">
         #{unknown2,jdbcType=DECIMAL},
@@ -340,35 +427,65 @@
       <if test="record.dailyGrowRate != null">
         daily_grow_rate = #{record.dailyGrowRate,jdbcType=DECIMAL},
       </if>
-      <if test="record.nearly1Week != null">
-        nearly_1_week = #{record.nearly1Week,jdbcType=DECIMAL},
+      <if test="record.nearly1WeekGrowRate != null">
+        nearly_1_week_grow_rate = #{record.nearly1WeekGrowRate,jdbcType=DECIMAL},
       </if>
-      <if test="record.nearly1Month != null">
-        nearly_1_month = #{record.nearly1Month,jdbcType=DECIMAL},
+      <if test="record.nearly1MonthGrowRate != null">
+        nearly_1_month_grow_rate = #{record.nearly1MonthGrowRate,jdbcType=DECIMAL},
       </if>
-      <if test="record.nearly3Month != null">
-        nearly_3_month = #{record.nearly3Month,jdbcType=DECIMAL},
+      <if test="record.nearly3MonthGrowRate != null">
+        nearly_3_month_grow_rate = #{record.nearly3MonthGrowRate,jdbcType=DECIMAL},
       </if>
-      <if test="record.nearly6Month != null">
-        nearly_6_month = #{record.nearly6Month,jdbcType=DECIMAL},
+      <if test="record.nearly6MonthGrowRate != null">
+        nearly_6_month_grow_rate = #{record.nearly6MonthGrowRate,jdbcType=DECIMAL},
       </if>
-      <if test="record.nearly1Year != null">
-        nearly_1_year = #{record.nearly1Year,jdbcType=DECIMAL},
+      <if test="record.nearly1YearGrowRate != null">
+        nearly_1_year_grow_rate = #{record.nearly1YearGrowRate,jdbcType=DECIMAL},
       </if>
-      <if test="record.nearly2Year != null">
-        nearly_2_year = #{record.nearly2Year,jdbcType=DECIMAL},
+      <if test="record.nearly2YearGrowRate != null">
+        nearly_2_year_grow_rate = #{record.nearly2YearGrowRate,jdbcType=DECIMAL},
       </if>
-      <if test="record.nearly3Year != null">
-        nearly_3_year = #{record.nearly3Year,jdbcType=DECIMAL},
+      <if test="record.nearly3YearGrowRate != null">
+        nearly_3_year_grow_rate = #{record.nearly3YearGrowRate,jdbcType=DECIMAL},
       </if>
-      <if test="record.sinceThisYear != null">
-        since_this_year = #{record.sinceThisYear,jdbcType=DECIMAL},
+      <if test="record.sinceThisYearGrowRate != null">
+        since_this_year_grow_rate = #{record.sinceThisYearGrowRate,jdbcType=DECIMAL},
       </if>
-      <if test="record.sinceEstablish != null">
-        since_establish = #{record.sinceEstablish,jdbcType=DECIMAL},
+      <if test="record.sinceEstablishGrowRate != null">
+        since_establish_grow_rate = #{record.sinceEstablishGrowRate,jdbcType=DECIMAL},
+      </if>
+      <if test="record.nearly1YearWaveRate != null">
+        nearly_1_year_wave_rate = #{record.nearly1YearWaveRate,jdbcType=DECIMAL},
+      </if>
+      <if test="record.nearly2YearWaveRate != null">
+        nearly_2_year_wave_rate = #{record.nearly2YearWaveRate,jdbcType=DECIMAL},
+      </if>
+      <if test="record.nearly3YearWaveRate != null">
+        nearly_3_year_wave_rate = #{record.nearly3YearWaveRate,jdbcType=DECIMAL},
+      </if>
+      <if test="record.nearly1YearSharpRate != null">
+        nearly_1_year_sharp_rate = #{record.nearly1YearSharpRate,jdbcType=DECIMAL},
+      </if>
+      <if test="record.nearly2YearSharpRate != null">
+        nearly_2_year_sharp_rate = #{record.nearly2YearSharpRate,jdbcType=DECIMAL},
+      </if>
+      <if test="record.nearly3YearSharpRate != null">
+        nearly_3_year_sharp_rate = #{record.nearly3YearSharpRate,jdbcType=DECIMAL},
       </if>
       <if test="record.establishDate != null">
         establish_date = #{record.establishDate,jdbcType=DATE},
+      </if>
+      <if test="record.fundManager != null">
+        fund_manager = #{record.fundManager,jdbcType=VARCHAR},
+      </if>
+      <if test="record.managerStartDate != null">
+        manager_start_date = #{record.managerStartDate,jdbcType=DATE},
+      </if>
+      <if test="record.previousFundManager != null">
+        previous_fund_manager = #{record.previousFundManager,jdbcType=VARCHAR},
+      </if>
+      <if test="record.previousManagerStartDate != null">
+        previous_manager_start_date = #{record.previousManagerStartDate,jdbcType=DATE},
       </if>
       <if test="record.unknown1 != null">
         unknown_1 = #{record.unknown1,jdbcType=INTEGER},
@@ -376,14 +493,14 @@
       <if test="record.custom != null">
         custom = #{record.custom,jdbcType=DECIMAL},
       </if>
-      <if test="record.serviceCharge != null">
-        service_charge = #{record.serviceCharge,jdbcType=DECIMAL},
+      <if test="record.serviceChargeRate != null">
+        service_charge_rate = #{record.serviceChargeRate,jdbcType=DECIMAL},
       </if>
-      <if test="record.discountServiceCharge != null">
-        discount_service_charge = #{record.discountServiceCharge,jdbcType=DECIMAL},
+      <if test="record.discountServiceChargeRate != null">
+        discount_service_charge_rate = #{record.discountServiceChargeRate,jdbcType=DECIMAL},
       </if>
-      <if test="record.discount != null">
-        discount = #{record.discount,jdbcType=DECIMAL},
+      <if test="record.discountRate != null">
+        discount_rate = #{record.discountRate,jdbcType=DECIMAL},
       </if>
       <if test="record.unknown2 != null">
         unknown_2 = #{record.unknown2,jdbcType=DECIMAL},
@@ -409,21 +526,31 @@
       net_asset_value = #{record.netAssetValue,jdbcType=DECIMAL},
       accumulated_net = #{record.accumulatedNet,jdbcType=DECIMAL},
       daily_grow_rate = #{record.dailyGrowRate,jdbcType=DECIMAL},
-      nearly_1_week = #{record.nearly1Week,jdbcType=DECIMAL},
-      nearly_1_month = #{record.nearly1Month,jdbcType=DECIMAL},
-      nearly_3_month = #{record.nearly3Month,jdbcType=DECIMAL},
-      nearly_6_month = #{record.nearly6Month,jdbcType=DECIMAL},
-      nearly_1_year = #{record.nearly1Year,jdbcType=DECIMAL},
-      nearly_2_year = #{record.nearly2Year,jdbcType=DECIMAL},
-      nearly_3_year = #{record.nearly3Year,jdbcType=DECIMAL},
-      since_this_year = #{record.sinceThisYear,jdbcType=DECIMAL},
-      since_establish = #{record.sinceEstablish,jdbcType=DECIMAL},
+      nearly_1_week_grow_rate = #{record.nearly1WeekGrowRate,jdbcType=DECIMAL},
+      nearly_1_month_grow_rate = #{record.nearly1MonthGrowRate,jdbcType=DECIMAL},
+      nearly_3_month_grow_rate = #{record.nearly3MonthGrowRate,jdbcType=DECIMAL},
+      nearly_6_month_grow_rate = #{record.nearly6MonthGrowRate,jdbcType=DECIMAL},
+      nearly_1_year_grow_rate = #{record.nearly1YearGrowRate,jdbcType=DECIMAL},
+      nearly_2_year_grow_rate = #{record.nearly2YearGrowRate,jdbcType=DECIMAL},
+      nearly_3_year_grow_rate = #{record.nearly3YearGrowRate,jdbcType=DECIMAL},
+      since_this_year_grow_rate = #{record.sinceThisYearGrowRate,jdbcType=DECIMAL},
+      since_establish_grow_rate = #{record.sinceEstablishGrowRate,jdbcType=DECIMAL},
+      nearly_1_year_wave_rate = #{record.nearly1YearWaveRate,jdbcType=DECIMAL},
+      nearly_2_year_wave_rate = #{record.nearly2YearWaveRate,jdbcType=DECIMAL},
+      nearly_3_year_wave_rate = #{record.nearly3YearWaveRate,jdbcType=DECIMAL},
+      nearly_1_year_sharp_rate = #{record.nearly1YearSharpRate,jdbcType=DECIMAL},
+      nearly_2_year_sharp_rate = #{record.nearly2YearSharpRate,jdbcType=DECIMAL},
+      nearly_3_year_sharp_rate = #{record.nearly3YearSharpRate,jdbcType=DECIMAL},
       establish_date = #{record.establishDate,jdbcType=DATE},
+      fund_manager = #{record.fundManager,jdbcType=VARCHAR},
+      manager_start_date = #{record.managerStartDate,jdbcType=DATE},
+      previous_fund_manager = #{record.previousFundManager,jdbcType=VARCHAR},
+      previous_manager_start_date = #{record.previousManagerStartDate,jdbcType=DATE},
       unknown_1 = #{record.unknown1,jdbcType=INTEGER},
       custom = #{record.custom,jdbcType=DECIMAL},
-      service_charge = #{record.serviceCharge,jdbcType=DECIMAL},
-      discount_service_charge = #{record.discountServiceCharge,jdbcType=DECIMAL},
-      discount = #{record.discount,jdbcType=DECIMAL},
+      service_charge_rate = #{record.serviceChargeRate,jdbcType=DECIMAL},
+      discount_service_charge_rate = #{record.discountServiceChargeRate,jdbcType=DECIMAL},
+      discount_rate = #{record.discountRate,jdbcType=DECIMAL},
       unknown_2 = #{record.unknown2,jdbcType=DECIMAL},
       create_time = #{record.createTime,jdbcType=TIMESTAMP},
       update_time = #{record.updateTime,jdbcType=TIMESTAMP}
@@ -455,35 +582,65 @@
       <if test="dailyGrowRate != null">
         daily_grow_rate = #{dailyGrowRate,jdbcType=DECIMAL},
       </if>
-      <if test="nearly1Week != null">
-        nearly_1_week = #{nearly1Week,jdbcType=DECIMAL},
+      <if test="nearly1WeekGrowRate != null">
+        nearly_1_week_grow_rate = #{nearly1WeekGrowRate,jdbcType=DECIMAL},
       </if>
-      <if test="nearly1Month != null">
-        nearly_1_month = #{nearly1Month,jdbcType=DECIMAL},
+      <if test="nearly1MonthGrowRate != null">
+        nearly_1_month_grow_rate = #{nearly1MonthGrowRate,jdbcType=DECIMAL},
       </if>
-      <if test="nearly3Month != null">
-        nearly_3_month = #{nearly3Month,jdbcType=DECIMAL},
+      <if test="nearly3MonthGrowRate != null">
+        nearly_3_month_grow_rate = #{nearly3MonthGrowRate,jdbcType=DECIMAL},
       </if>
-      <if test="nearly6Month != null">
-        nearly_6_month = #{nearly6Month,jdbcType=DECIMAL},
+      <if test="nearly6MonthGrowRate != null">
+        nearly_6_month_grow_rate = #{nearly6MonthGrowRate,jdbcType=DECIMAL},
       </if>
-      <if test="nearly1Year != null">
-        nearly_1_year = #{nearly1Year,jdbcType=DECIMAL},
+      <if test="nearly1YearGrowRate != null">
+        nearly_1_year_grow_rate = #{nearly1YearGrowRate,jdbcType=DECIMAL},
       </if>
-      <if test="nearly2Year != null">
-        nearly_2_year = #{nearly2Year,jdbcType=DECIMAL},
+      <if test="nearly2YearGrowRate != null">
+        nearly_2_year_grow_rate = #{nearly2YearGrowRate,jdbcType=DECIMAL},
       </if>
-      <if test="nearly3Year != null">
-        nearly_3_year = #{nearly3Year,jdbcType=DECIMAL},
+      <if test="nearly3YearGrowRate != null">
+        nearly_3_year_grow_rate = #{nearly3YearGrowRate,jdbcType=DECIMAL},
       </if>
-      <if test="sinceThisYear != null">
-        since_this_year = #{sinceThisYear,jdbcType=DECIMAL},
+      <if test="sinceThisYearGrowRate != null">
+        since_this_year_grow_rate = #{sinceThisYearGrowRate,jdbcType=DECIMAL},
       </if>
-      <if test="sinceEstablish != null">
-        since_establish = #{sinceEstablish,jdbcType=DECIMAL},
+      <if test="sinceEstablishGrowRate != null">
+        since_establish_grow_rate = #{sinceEstablishGrowRate,jdbcType=DECIMAL},
+      </if>
+      <if test="nearly1YearWaveRate != null">
+        nearly_1_year_wave_rate = #{nearly1YearWaveRate,jdbcType=DECIMAL},
+      </if>
+      <if test="nearly2YearWaveRate != null">
+        nearly_2_year_wave_rate = #{nearly2YearWaveRate,jdbcType=DECIMAL},
+      </if>
+      <if test="nearly3YearWaveRate != null">
+        nearly_3_year_wave_rate = #{nearly3YearWaveRate,jdbcType=DECIMAL},
+      </if>
+      <if test="nearly1YearSharpRate != null">
+        nearly_1_year_sharp_rate = #{nearly1YearSharpRate,jdbcType=DECIMAL},
+      </if>
+      <if test="nearly2YearSharpRate != null">
+        nearly_2_year_sharp_rate = #{nearly2YearSharpRate,jdbcType=DECIMAL},
+      </if>
+      <if test="nearly3YearSharpRate != null">
+        nearly_3_year_sharp_rate = #{nearly3YearSharpRate,jdbcType=DECIMAL},
       </if>
       <if test="establishDate != null">
         establish_date = #{establishDate,jdbcType=DATE},
+      </if>
+      <if test="fundManager != null">
+        fund_manager = #{fundManager,jdbcType=VARCHAR},
+      </if>
+      <if test="managerStartDate != null">
+        manager_start_date = #{managerStartDate,jdbcType=DATE},
+      </if>
+      <if test="previousFundManager != null">
+        previous_fund_manager = #{previousFundManager,jdbcType=VARCHAR},
+      </if>
+      <if test="previousManagerStartDate != null">
+        previous_manager_start_date = #{previousManagerStartDate,jdbcType=DATE},
       </if>
       <if test="unknown1 != null">
         unknown_1 = #{unknown1,jdbcType=INTEGER},
@@ -491,14 +648,14 @@
       <if test="custom != null">
         custom = #{custom,jdbcType=DECIMAL},
       </if>
-      <if test="serviceCharge != null">
-        service_charge = #{serviceCharge,jdbcType=DECIMAL},
+      <if test="serviceChargeRate != null">
+        service_charge_rate = #{serviceChargeRate,jdbcType=DECIMAL},
       </if>
-      <if test="discountServiceCharge != null">
-        discount_service_charge = #{discountServiceCharge,jdbcType=DECIMAL},
+      <if test="discountServiceChargeRate != null">
+        discount_service_charge_rate = #{discountServiceChargeRate,jdbcType=DECIMAL},
       </if>
-      <if test="discount != null">
-        discount = #{discount,jdbcType=DECIMAL},
+      <if test="discountRate != null">
+        discount_rate = #{discountRate,jdbcType=DECIMAL},
       </if>
       <if test="unknown2 != null">
         unknown_2 = #{unknown2,jdbcType=DECIMAL},
@@ -521,21 +678,31 @@
       net_asset_value = #{netAssetValue,jdbcType=DECIMAL},
       accumulated_net = #{accumulatedNet,jdbcType=DECIMAL},
       daily_grow_rate = #{dailyGrowRate,jdbcType=DECIMAL},
-      nearly_1_week = #{nearly1Week,jdbcType=DECIMAL},
-      nearly_1_month = #{nearly1Month,jdbcType=DECIMAL},
-      nearly_3_month = #{nearly3Month,jdbcType=DECIMAL},
-      nearly_6_month = #{nearly6Month,jdbcType=DECIMAL},
-      nearly_1_year = #{nearly1Year,jdbcType=DECIMAL},
-      nearly_2_year = #{nearly2Year,jdbcType=DECIMAL},
-      nearly_3_year = #{nearly3Year,jdbcType=DECIMAL},
-      since_this_year = #{sinceThisYear,jdbcType=DECIMAL},
-      since_establish = #{sinceEstablish,jdbcType=DECIMAL},
+      nearly_1_week_grow_rate = #{nearly1WeekGrowRate,jdbcType=DECIMAL},
+      nearly_1_month_grow_rate = #{nearly1MonthGrowRate,jdbcType=DECIMAL},
+      nearly_3_month_grow_rate = #{nearly3MonthGrowRate,jdbcType=DECIMAL},
+      nearly_6_month_grow_rate = #{nearly6MonthGrowRate,jdbcType=DECIMAL},
+      nearly_1_year_grow_rate = #{nearly1YearGrowRate,jdbcType=DECIMAL},
+      nearly_2_year_grow_rate = #{nearly2YearGrowRate,jdbcType=DECIMAL},
+      nearly_3_year_grow_rate = #{nearly3YearGrowRate,jdbcType=DECIMAL},
+      since_this_year_grow_rate = #{sinceThisYearGrowRate,jdbcType=DECIMAL},
+      since_establish_grow_rate = #{sinceEstablishGrowRate,jdbcType=DECIMAL},
+      nearly_1_year_wave_rate = #{nearly1YearWaveRate,jdbcType=DECIMAL},
+      nearly_2_year_wave_rate = #{nearly2YearWaveRate,jdbcType=DECIMAL},
+      nearly_3_year_wave_rate = #{nearly3YearWaveRate,jdbcType=DECIMAL},
+      nearly_1_year_sharp_rate = #{nearly1YearSharpRate,jdbcType=DECIMAL},
+      nearly_2_year_sharp_rate = #{nearly2YearSharpRate,jdbcType=DECIMAL},
+      nearly_3_year_sharp_rate = #{nearly3YearSharpRate,jdbcType=DECIMAL},
       establish_date = #{establishDate,jdbcType=DATE},
+      fund_manager = #{fundManager,jdbcType=VARCHAR},
+      manager_start_date = #{managerStartDate,jdbcType=DATE},
+      previous_fund_manager = #{previousFundManager,jdbcType=VARCHAR},
+      previous_manager_start_date = #{previousManagerStartDate,jdbcType=DATE},
       unknown_1 = #{unknown1,jdbcType=INTEGER},
       custom = #{custom,jdbcType=DECIMAL},
-      service_charge = #{serviceCharge,jdbcType=DECIMAL},
-      discount_service_charge = #{discountServiceCharge,jdbcType=DECIMAL},
-      discount = #{discount,jdbcType=DECIMAL},
+      service_charge_rate = #{serviceChargeRate,jdbcType=DECIMAL},
+      discount_service_charge_rate = #{discountServiceChargeRate,jdbcType=DECIMAL},
+      discount_rate = #{discountRate,jdbcType=DECIMAL},
       unknown_2 = #{unknown2,jdbcType=DECIMAL},
       create_time = #{createTime,jdbcType=TIMESTAMP},
       update_time = #{updateTime,jdbcType=TIMESTAMP}

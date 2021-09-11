@@ -20,35 +20,55 @@ public class FundDetailInfo {
 
     private BigDecimal dailyGrowRate;
 
-    private BigDecimal nearly1Week;
+    private BigDecimal nearly1WeekGrowRate;
 
-    private BigDecimal nearly1Month;
+    private BigDecimal nearly1MonthGrowRate;
 
-    private BigDecimal nearly3Month;
+    private BigDecimal nearly3MonthGrowRate;
 
-    private BigDecimal nearly6Month;
+    private BigDecimal nearly6MonthGrowRate;
 
-    private BigDecimal nearly1Year;
+    private BigDecimal nearly1YearGrowRate;
 
-    private BigDecimal nearly2Year;
+    private BigDecimal nearly2YearGrowRate;
 
-    private BigDecimal nearly3Year;
+    private BigDecimal nearly3YearGrowRate;
 
-    private BigDecimal sinceThisYear;
+    private BigDecimal sinceThisYearGrowRate;
 
-    private BigDecimal sinceEstablish;
+    private BigDecimal sinceEstablishGrowRate;
+
+    private BigDecimal nearly1YearWaveRate;
+
+    private BigDecimal nearly2YearWaveRate;
+
+    private BigDecimal nearly3YearWaveRate;
+
+    private BigDecimal nearly1YearSharpRate;
+
+    private BigDecimal nearly2YearSharpRate;
+
+    private BigDecimal nearly3YearSharpRate;
 
     private Date establishDate;
+
+    private String fundManager;
+
+    private Date managerStartDate;
+
+    private String previousFundManager;
+
+    private Date previousManagerStartDate;
 
     private Integer unknown1;
 
     private BigDecimal custom;
 
-    private BigDecimal serviceCharge;
+    private BigDecimal serviceChargeRate;
 
-    private BigDecimal discountServiceCharge;
+    private BigDecimal discountServiceChargeRate;
 
-    private BigDecimal discount;
+    private BigDecimal discountRate;
 
     private BigDecimal unknown2;
 
@@ -120,76 +140,124 @@ public class FundDetailInfo {
         this.dailyGrowRate = dailyGrowRate;
     }
 
-    public BigDecimal getNearly1Week() {
-        return nearly1Week;
+    public BigDecimal getNearly1WeekGrowRate() {
+        return nearly1WeekGrowRate;
     }
 
-    public void setNearly1Week(BigDecimal nearly1Week) {
-        this.nearly1Week = nearly1Week;
+    public void setNearly1WeekGrowRate(BigDecimal nearly1WeekGrowRate) {
+        this.nearly1WeekGrowRate = nearly1WeekGrowRate;
     }
 
-    public BigDecimal getNearly1Month() {
-        return nearly1Month;
+    public BigDecimal getNearly1MonthGrowRate() {
+        return nearly1MonthGrowRate;
     }
 
-    public void setNearly1Month(BigDecimal nearly1Month) {
-        this.nearly1Month = nearly1Month;
+    public void setNearly1MonthGrowRate(BigDecimal nearly1MonthGrowRate) {
+        this.nearly1MonthGrowRate = nearly1MonthGrowRate;
     }
 
-    public BigDecimal getNearly3Month() {
-        return nearly3Month;
+    public BigDecimal getNearly3MonthGrowRate() {
+        return nearly3MonthGrowRate;
     }
 
-    public void setNearly3Month(BigDecimal nearly3Month) {
-        this.nearly3Month = nearly3Month;
+    public void setNearly3MonthGrowRate(BigDecimal nearly3MonthGrowRate) {
+        this.nearly3MonthGrowRate = nearly3MonthGrowRate;
     }
 
-    public BigDecimal getNearly6Month() {
-        return nearly6Month;
+    public BigDecimal getNearly6MonthGrowRate() {
+        return nearly6MonthGrowRate;
     }
 
-    public void setNearly6Month(BigDecimal nearly6Month) {
-        this.nearly6Month = nearly6Month;
+    public void setNearly6MonthGrowRate(BigDecimal nearly6MonthGrowRate) {
+        this.nearly6MonthGrowRate = nearly6MonthGrowRate;
     }
 
-    public BigDecimal getNearly1Year() {
-        return nearly1Year;
+    public BigDecimal getNearly1YearGrowRate() {
+        return nearly1YearGrowRate;
     }
 
-    public void setNearly1Year(BigDecimal nearly1Year) {
-        this.nearly1Year = nearly1Year;
+    public void setNearly1YearGrowRate(BigDecimal nearly1YearGrowRate) {
+        this.nearly1YearGrowRate = nearly1YearGrowRate;
     }
 
-    public BigDecimal getNearly2Year() {
-        return nearly2Year;
+    public BigDecimal getNearly2YearGrowRate() {
+        return nearly2YearGrowRate;
     }
 
-    public void setNearly2Year(BigDecimal nearly2Year) {
-        this.nearly2Year = nearly2Year;
+    public void setNearly2YearGrowRate(BigDecimal nearly2YearGrowRate) {
+        this.nearly2YearGrowRate = nearly2YearGrowRate;
     }
 
-    public BigDecimal getNearly3Year() {
-        return nearly3Year;
+    public BigDecimal getNearly3YearGrowRate() {
+        return nearly3YearGrowRate;
     }
 
-    public void setNearly3Year(BigDecimal nearly3Year) {
-        this.nearly3Year = nearly3Year;
+    public void setNearly3YearGrowRate(BigDecimal nearly3YearGrowRate) {
+        this.nearly3YearGrowRate = nearly3YearGrowRate;
     }
 
-    public BigDecimal getSinceThisYear() {
-        return sinceThisYear;
+    public BigDecimal getSinceThisYearGrowRate() {
+        return sinceThisYearGrowRate;
     }
 
-    public void setSinceThisYear(BigDecimal sinceThisYear) {
-        this.sinceThisYear = sinceThisYear;
+    public void setSinceThisYearGrowRate(BigDecimal sinceThisYearGrowRate) {
+        this.sinceThisYearGrowRate = sinceThisYearGrowRate;
     }
 
-    public BigDecimal getSinceEstablish() {
-        return sinceEstablish;
+    public BigDecimal getSinceEstablishGrowRate() {
+        return sinceEstablishGrowRate;
     }
 
-    public void setSinceEstablish(BigDecimal sinceEstablish) {
-        this.sinceEstablish = sinceEstablish;
+    public void setSinceEstablishGrowRate(BigDecimal sinceEstablishGrowRate) {
+        this.sinceEstablishGrowRate = sinceEstablishGrowRate;
+    }
+
+    public BigDecimal getNearly1YearWaveRate() {
+        return nearly1YearWaveRate;
+    }
+
+    public void setNearly1YearWaveRate(BigDecimal nearly1YearWaveRate) {
+        this.nearly1YearWaveRate = nearly1YearWaveRate;
+    }
+
+    public BigDecimal getNearly2YearWaveRate() {
+        return nearly2YearWaveRate;
+    }
+
+    public void setNearly2YearWaveRate(BigDecimal nearly2YearWaveRate) {
+        this.nearly2YearWaveRate = nearly2YearWaveRate;
+    }
+
+    public BigDecimal getNearly3YearWaveRate() {
+        return nearly3YearWaveRate;
+    }
+
+    public void setNearly3YearWaveRate(BigDecimal nearly3YearWaveRate) {
+        this.nearly3YearWaveRate = nearly3YearWaveRate;
+    }
+
+    public BigDecimal getNearly1YearSharpRate() {
+        return nearly1YearSharpRate;
+    }
+
+    public void setNearly1YearSharpRate(BigDecimal nearly1YearSharpRate) {
+        this.nearly1YearSharpRate = nearly1YearSharpRate;
+    }
+
+    public BigDecimal getNearly2YearSharpRate() {
+        return nearly2YearSharpRate;
+    }
+
+    public void setNearly2YearSharpRate(BigDecimal nearly2YearSharpRate) {
+        this.nearly2YearSharpRate = nearly2YearSharpRate;
+    }
+
+    public BigDecimal getNearly3YearSharpRate() {
+        return nearly3YearSharpRate;
+    }
+
+    public void setNearly3YearSharpRate(BigDecimal nearly3YearSharpRate) {
+        this.nearly3YearSharpRate = nearly3YearSharpRate;
     }
 
     public Date getEstablishDate() {
@@ -198,6 +266,38 @@ public class FundDetailInfo {
 
     public void setEstablishDate(Date establishDate) {
         this.establishDate = establishDate;
+    }
+
+    public String getFundManager() {
+        return fundManager;
+    }
+
+    public void setFundManager(String fundManager) {
+        this.fundManager = fundManager == null ? null : fundManager.trim();
+    }
+
+    public Date getManagerStartDate() {
+        return managerStartDate;
+    }
+
+    public void setManagerStartDate(Date managerStartDate) {
+        this.managerStartDate = managerStartDate;
+    }
+
+    public String getPreviousFundManager() {
+        return previousFundManager;
+    }
+
+    public void setPreviousFundManager(String previousFundManager) {
+        this.previousFundManager = previousFundManager == null ? null : previousFundManager.trim();
+    }
+
+    public Date getPreviousManagerStartDate() {
+        return previousManagerStartDate;
+    }
+
+    public void setPreviousManagerStartDate(Date previousManagerStartDate) {
+        this.previousManagerStartDate = previousManagerStartDate;
     }
 
     public Integer getUnknown1() {
@@ -216,28 +316,28 @@ public class FundDetailInfo {
         this.custom = custom;
     }
 
-    public BigDecimal getServiceCharge() {
-        return serviceCharge;
+    public BigDecimal getServiceChargeRate() {
+        return serviceChargeRate;
     }
 
-    public void setServiceCharge(BigDecimal serviceCharge) {
-        this.serviceCharge = serviceCharge;
+    public void setServiceChargeRate(BigDecimal serviceChargeRate) {
+        this.serviceChargeRate = serviceChargeRate;
     }
 
-    public BigDecimal getDiscountServiceCharge() {
-        return discountServiceCharge;
+    public BigDecimal getDiscountServiceChargeRate() {
+        return discountServiceChargeRate;
     }
 
-    public void setDiscountServiceCharge(BigDecimal discountServiceCharge) {
-        this.discountServiceCharge = discountServiceCharge;
+    public void setDiscountServiceChargeRate(BigDecimal discountServiceChargeRate) {
+        this.discountServiceChargeRate = discountServiceChargeRate;
     }
 
-    public BigDecimal getDiscount() {
-        return discount;
+    public BigDecimal getDiscountRate() {
+        return discountRate;
     }
 
-    public void setDiscount(BigDecimal discount) {
-        this.discount = discount;
+    public void setDiscountRate(BigDecimal discountRate) {
+        this.discountRate = discountRate;
     }
 
     public BigDecimal getUnknown2() {

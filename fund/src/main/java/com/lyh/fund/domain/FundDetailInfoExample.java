@@ -643,543 +643,903 @@ public class FundDetailInfoExample {
             return (Criteria) this;
         }
 
-        public Criteria andNearly1WeekIsNull() {
-            addCriterion("nearly_1_week is null");
+        public Criteria andNearly1WeekGrowRateIsNull() {
+            addCriterion("nearly_1_week_grow_rate is null");
             return (Criteria) this;
         }
 
-        public Criteria andNearly1WeekIsNotNull() {
-            addCriterion("nearly_1_week is not null");
+        public Criteria andNearly1WeekGrowRateIsNotNull() {
+            addCriterion("nearly_1_week_grow_rate is not null");
             return (Criteria) this;
         }
 
-        public Criteria andNearly1WeekEqualTo(BigDecimal value) {
-            addCriterion("nearly_1_week =", value, "nearly1Week");
+        public Criteria andNearly1WeekGrowRateEqualTo(BigDecimal value) {
+            addCriterion("nearly_1_week_grow_rate =", value, "nearly1WeekGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly1WeekNotEqualTo(BigDecimal value) {
-            addCriterion("nearly_1_week <>", value, "nearly1Week");
+        public Criteria andNearly1WeekGrowRateNotEqualTo(BigDecimal value) {
+            addCriterion("nearly_1_week_grow_rate <>", value, "nearly1WeekGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly1WeekGreaterThan(BigDecimal value) {
-            addCriterion("nearly_1_week >", value, "nearly1Week");
+        public Criteria andNearly1WeekGrowRateGreaterThan(BigDecimal value) {
+            addCriterion("nearly_1_week_grow_rate >", value, "nearly1WeekGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly1WeekGreaterThanOrEqualTo(BigDecimal value) {
-            addCriterion("nearly_1_week >=", value, "nearly1Week");
+        public Criteria andNearly1WeekGrowRateGreaterThanOrEqualTo(BigDecimal value) {
+            addCriterion("nearly_1_week_grow_rate >=", value, "nearly1WeekGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly1WeekLessThan(BigDecimal value) {
-            addCriterion("nearly_1_week <", value, "nearly1Week");
+        public Criteria andNearly1WeekGrowRateLessThan(BigDecimal value) {
+            addCriterion("nearly_1_week_grow_rate <", value, "nearly1WeekGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly1WeekLessThanOrEqualTo(BigDecimal value) {
-            addCriterion("nearly_1_week <=", value, "nearly1Week");
+        public Criteria andNearly1WeekGrowRateLessThanOrEqualTo(BigDecimal value) {
+            addCriterion("nearly_1_week_grow_rate <=", value, "nearly1WeekGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly1WeekIn(List<BigDecimal> values) {
-            addCriterion("nearly_1_week in", values, "nearly1Week");
+        public Criteria andNearly1WeekGrowRateIn(List<BigDecimal> values) {
+            addCriterion("nearly_1_week_grow_rate in", values, "nearly1WeekGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly1WeekNotIn(List<BigDecimal> values) {
-            addCriterion("nearly_1_week not in", values, "nearly1Week");
+        public Criteria andNearly1WeekGrowRateNotIn(List<BigDecimal> values) {
+            addCriterion("nearly_1_week_grow_rate not in", values, "nearly1WeekGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly1WeekBetween(BigDecimal value1, BigDecimal value2) {
-            addCriterion("nearly_1_week between", value1, value2, "nearly1Week");
+        public Criteria andNearly1WeekGrowRateBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("nearly_1_week_grow_rate between", value1, value2, "nearly1WeekGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly1WeekNotBetween(BigDecimal value1, BigDecimal value2) {
-            addCriterion("nearly_1_week not between", value1, value2, "nearly1Week");
+        public Criteria andNearly1WeekGrowRateNotBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("nearly_1_week_grow_rate not between", value1, value2, "nearly1WeekGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly1MonthIsNull() {
-            addCriterion("nearly_1_month is null");
+        public Criteria andNearly1MonthGrowRateIsNull() {
+            addCriterion("nearly_1_month_grow_rate is null");
             return (Criteria) this;
         }
 
-        public Criteria andNearly1MonthIsNotNull() {
-            addCriterion("nearly_1_month is not null");
+        public Criteria andNearly1MonthGrowRateIsNotNull() {
+            addCriterion("nearly_1_month_grow_rate is not null");
             return (Criteria) this;
         }
 
-        public Criteria andNearly1MonthEqualTo(BigDecimal value) {
-            addCriterion("nearly_1_month =", value, "nearly1Month");
+        public Criteria andNearly1MonthGrowRateEqualTo(BigDecimal value) {
+            addCriterion("nearly_1_month_grow_rate =", value, "nearly1MonthGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly1MonthNotEqualTo(BigDecimal value) {
-            addCriterion("nearly_1_month <>", value, "nearly1Month");
+        public Criteria andNearly1MonthGrowRateNotEqualTo(BigDecimal value) {
+            addCriterion("nearly_1_month_grow_rate <>", value, "nearly1MonthGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly1MonthGreaterThan(BigDecimal value) {
-            addCriterion("nearly_1_month >", value, "nearly1Month");
+        public Criteria andNearly1MonthGrowRateGreaterThan(BigDecimal value) {
+            addCriterion("nearly_1_month_grow_rate >", value, "nearly1MonthGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly1MonthGreaterThanOrEqualTo(BigDecimal value) {
-            addCriterion("nearly_1_month >=", value, "nearly1Month");
+        public Criteria andNearly1MonthGrowRateGreaterThanOrEqualTo(BigDecimal value) {
+            addCriterion("nearly_1_month_grow_rate >=", value, "nearly1MonthGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly1MonthLessThan(BigDecimal value) {
-            addCriterion("nearly_1_month <", value, "nearly1Month");
+        public Criteria andNearly1MonthGrowRateLessThan(BigDecimal value) {
+            addCriterion("nearly_1_month_grow_rate <", value, "nearly1MonthGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly1MonthLessThanOrEqualTo(BigDecimal value) {
-            addCriterion("nearly_1_month <=", value, "nearly1Month");
+        public Criteria andNearly1MonthGrowRateLessThanOrEqualTo(BigDecimal value) {
+            addCriterion("nearly_1_month_grow_rate <=", value, "nearly1MonthGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly1MonthIn(List<BigDecimal> values) {
-            addCriterion("nearly_1_month in", values, "nearly1Month");
+        public Criteria andNearly1MonthGrowRateIn(List<BigDecimal> values) {
+            addCriterion("nearly_1_month_grow_rate in", values, "nearly1MonthGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly1MonthNotIn(List<BigDecimal> values) {
-            addCriterion("nearly_1_month not in", values, "nearly1Month");
+        public Criteria andNearly1MonthGrowRateNotIn(List<BigDecimal> values) {
+            addCriterion("nearly_1_month_grow_rate not in", values, "nearly1MonthGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly1MonthBetween(BigDecimal value1, BigDecimal value2) {
-            addCriterion("nearly_1_month between", value1, value2, "nearly1Month");
+        public Criteria andNearly1MonthGrowRateBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("nearly_1_month_grow_rate between", value1, value2, "nearly1MonthGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly1MonthNotBetween(BigDecimal value1, BigDecimal value2) {
-            addCriterion("nearly_1_month not between", value1, value2, "nearly1Month");
+        public Criteria andNearly1MonthGrowRateNotBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("nearly_1_month_grow_rate not between", value1, value2, "nearly1MonthGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly3MonthIsNull() {
-            addCriterion("nearly_3_month is null");
+        public Criteria andNearly3MonthGrowRateIsNull() {
+            addCriterion("nearly_3_month_grow_rate is null");
             return (Criteria) this;
         }
 
-        public Criteria andNearly3MonthIsNotNull() {
-            addCriterion("nearly_3_month is not null");
+        public Criteria andNearly3MonthGrowRateIsNotNull() {
+            addCriterion("nearly_3_month_grow_rate is not null");
             return (Criteria) this;
         }
 
-        public Criteria andNearly3MonthEqualTo(BigDecimal value) {
-            addCriterion("nearly_3_month =", value, "nearly3Month");
+        public Criteria andNearly3MonthGrowRateEqualTo(BigDecimal value) {
+            addCriterion("nearly_3_month_grow_rate =", value, "nearly3MonthGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly3MonthNotEqualTo(BigDecimal value) {
-            addCriterion("nearly_3_month <>", value, "nearly3Month");
+        public Criteria andNearly3MonthGrowRateNotEqualTo(BigDecimal value) {
+            addCriterion("nearly_3_month_grow_rate <>", value, "nearly3MonthGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly3MonthGreaterThan(BigDecimal value) {
-            addCriterion("nearly_3_month >", value, "nearly3Month");
+        public Criteria andNearly3MonthGrowRateGreaterThan(BigDecimal value) {
+            addCriterion("nearly_3_month_grow_rate >", value, "nearly3MonthGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly3MonthGreaterThanOrEqualTo(BigDecimal value) {
-            addCriterion("nearly_3_month >=", value, "nearly3Month");
+        public Criteria andNearly3MonthGrowRateGreaterThanOrEqualTo(BigDecimal value) {
+            addCriterion("nearly_3_month_grow_rate >=", value, "nearly3MonthGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly3MonthLessThan(BigDecimal value) {
-            addCriterion("nearly_3_month <", value, "nearly3Month");
+        public Criteria andNearly3MonthGrowRateLessThan(BigDecimal value) {
+            addCriterion("nearly_3_month_grow_rate <", value, "nearly3MonthGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly3MonthLessThanOrEqualTo(BigDecimal value) {
-            addCriterion("nearly_3_month <=", value, "nearly3Month");
+        public Criteria andNearly3MonthGrowRateLessThanOrEqualTo(BigDecimal value) {
+            addCriterion("nearly_3_month_grow_rate <=", value, "nearly3MonthGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly3MonthIn(List<BigDecimal> values) {
-            addCriterion("nearly_3_month in", values, "nearly3Month");
+        public Criteria andNearly3MonthGrowRateIn(List<BigDecimal> values) {
+            addCriterion("nearly_3_month_grow_rate in", values, "nearly3MonthGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly3MonthNotIn(List<BigDecimal> values) {
-            addCriterion("nearly_3_month not in", values, "nearly3Month");
+        public Criteria andNearly3MonthGrowRateNotIn(List<BigDecimal> values) {
+            addCriterion("nearly_3_month_grow_rate not in", values, "nearly3MonthGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly3MonthBetween(BigDecimal value1, BigDecimal value2) {
-            addCriterion("nearly_3_month between", value1, value2, "nearly3Month");
+        public Criteria andNearly3MonthGrowRateBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("nearly_3_month_grow_rate between", value1, value2, "nearly3MonthGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly3MonthNotBetween(BigDecimal value1, BigDecimal value2) {
-            addCriterion("nearly_3_month not between", value1, value2, "nearly3Month");
+        public Criteria andNearly3MonthGrowRateNotBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("nearly_3_month_grow_rate not between", value1, value2, "nearly3MonthGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly6MonthIsNull() {
-            addCriterion("nearly_6_month is null");
+        public Criteria andNearly6MonthGrowRateIsNull() {
+            addCriterion("nearly_6_month_grow_rate is null");
             return (Criteria) this;
         }
 
-        public Criteria andNearly6MonthIsNotNull() {
-            addCriterion("nearly_6_month is not null");
+        public Criteria andNearly6MonthGrowRateIsNotNull() {
+            addCriterion("nearly_6_month_grow_rate is not null");
             return (Criteria) this;
         }
 
-        public Criteria andNearly6MonthEqualTo(BigDecimal value) {
-            addCriterion("nearly_6_month =", value, "nearly6Month");
+        public Criteria andNearly6MonthGrowRateEqualTo(BigDecimal value) {
+            addCriterion("nearly_6_month_grow_rate =", value, "nearly6MonthGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly6MonthNotEqualTo(BigDecimal value) {
-            addCriterion("nearly_6_month <>", value, "nearly6Month");
+        public Criteria andNearly6MonthGrowRateNotEqualTo(BigDecimal value) {
+            addCriterion("nearly_6_month_grow_rate <>", value, "nearly6MonthGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly6MonthGreaterThan(BigDecimal value) {
-            addCriterion("nearly_6_month >", value, "nearly6Month");
+        public Criteria andNearly6MonthGrowRateGreaterThan(BigDecimal value) {
+            addCriterion("nearly_6_month_grow_rate >", value, "nearly6MonthGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly6MonthGreaterThanOrEqualTo(BigDecimal value) {
-            addCriterion("nearly_6_month >=", value, "nearly6Month");
+        public Criteria andNearly6MonthGrowRateGreaterThanOrEqualTo(BigDecimal value) {
+            addCriterion("nearly_6_month_grow_rate >=", value, "nearly6MonthGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly6MonthLessThan(BigDecimal value) {
-            addCriterion("nearly_6_month <", value, "nearly6Month");
+        public Criteria andNearly6MonthGrowRateLessThan(BigDecimal value) {
+            addCriterion("nearly_6_month_grow_rate <", value, "nearly6MonthGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly6MonthLessThanOrEqualTo(BigDecimal value) {
-            addCriterion("nearly_6_month <=", value, "nearly6Month");
+        public Criteria andNearly6MonthGrowRateLessThanOrEqualTo(BigDecimal value) {
+            addCriterion("nearly_6_month_grow_rate <=", value, "nearly6MonthGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly6MonthIn(List<BigDecimal> values) {
-            addCriterion("nearly_6_month in", values, "nearly6Month");
+        public Criteria andNearly6MonthGrowRateIn(List<BigDecimal> values) {
+            addCriterion("nearly_6_month_grow_rate in", values, "nearly6MonthGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly6MonthNotIn(List<BigDecimal> values) {
-            addCriterion("nearly_6_month not in", values, "nearly6Month");
+        public Criteria andNearly6MonthGrowRateNotIn(List<BigDecimal> values) {
+            addCriterion("nearly_6_month_grow_rate not in", values, "nearly6MonthGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly6MonthBetween(BigDecimal value1, BigDecimal value2) {
-            addCriterion("nearly_6_month between", value1, value2, "nearly6Month");
+        public Criteria andNearly6MonthGrowRateBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("nearly_6_month_grow_rate between", value1, value2, "nearly6MonthGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly6MonthNotBetween(BigDecimal value1, BigDecimal value2) {
-            addCriterion("nearly_6_month not between", value1, value2, "nearly6Month");
+        public Criteria andNearly6MonthGrowRateNotBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("nearly_6_month_grow_rate not between", value1, value2, "nearly6MonthGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly1YearIsNull() {
-            addCriterion("nearly_1_year is null");
+        public Criteria andNearly1YearGrowRateIsNull() {
+            addCriterion("nearly_1_year_grow_rate is null");
             return (Criteria) this;
         }
 
-        public Criteria andNearly1YearIsNotNull() {
-            addCriterion("nearly_1_year is not null");
+        public Criteria andNearly1YearGrowRateIsNotNull() {
+            addCriterion("nearly_1_year_grow_rate is not null");
             return (Criteria) this;
         }
 
-        public Criteria andNearly1YearEqualTo(BigDecimal value) {
-            addCriterion("nearly_1_year =", value, "nearly1Year");
+        public Criteria andNearly1YearGrowRateEqualTo(BigDecimal value) {
+            addCriterion("nearly_1_year_grow_rate =", value, "nearly1YearGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly1YearNotEqualTo(BigDecimal value) {
-            addCriterion("nearly_1_year <>", value, "nearly1Year");
+        public Criteria andNearly1YearGrowRateNotEqualTo(BigDecimal value) {
+            addCriterion("nearly_1_year_grow_rate <>", value, "nearly1YearGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly1YearGreaterThan(BigDecimal value) {
-            addCriterion("nearly_1_year >", value, "nearly1Year");
+        public Criteria andNearly1YearGrowRateGreaterThan(BigDecimal value) {
+            addCriterion("nearly_1_year_grow_rate >", value, "nearly1YearGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly1YearGreaterThanOrEqualTo(BigDecimal value) {
-            addCriterion("nearly_1_year >=", value, "nearly1Year");
+        public Criteria andNearly1YearGrowRateGreaterThanOrEqualTo(BigDecimal value) {
+            addCriterion("nearly_1_year_grow_rate >=", value, "nearly1YearGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly1YearLessThan(BigDecimal value) {
-            addCriterion("nearly_1_year <", value, "nearly1Year");
+        public Criteria andNearly1YearGrowRateLessThan(BigDecimal value) {
+            addCriterion("nearly_1_year_grow_rate <", value, "nearly1YearGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly1YearLessThanOrEqualTo(BigDecimal value) {
-            addCriterion("nearly_1_year <=", value, "nearly1Year");
+        public Criteria andNearly1YearGrowRateLessThanOrEqualTo(BigDecimal value) {
+            addCriterion("nearly_1_year_grow_rate <=", value, "nearly1YearGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly1YearIn(List<BigDecimal> values) {
-            addCriterion("nearly_1_year in", values, "nearly1Year");
+        public Criteria andNearly1YearGrowRateIn(List<BigDecimal> values) {
+            addCriterion("nearly_1_year_grow_rate in", values, "nearly1YearGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly1YearNotIn(List<BigDecimal> values) {
-            addCriterion("nearly_1_year not in", values, "nearly1Year");
+        public Criteria andNearly1YearGrowRateNotIn(List<BigDecimal> values) {
+            addCriterion("nearly_1_year_grow_rate not in", values, "nearly1YearGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly1YearBetween(BigDecimal value1, BigDecimal value2) {
-            addCriterion("nearly_1_year between", value1, value2, "nearly1Year");
+        public Criteria andNearly1YearGrowRateBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("nearly_1_year_grow_rate between", value1, value2, "nearly1YearGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly1YearNotBetween(BigDecimal value1, BigDecimal value2) {
-            addCriterion("nearly_1_year not between", value1, value2, "nearly1Year");
+        public Criteria andNearly1YearGrowRateNotBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("nearly_1_year_grow_rate not between", value1, value2, "nearly1YearGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly2YearIsNull() {
-            addCriterion("nearly_2_year is null");
+        public Criteria andNearly2YearGrowRateIsNull() {
+            addCriterion("nearly_2_year_grow_rate is null");
             return (Criteria) this;
         }
 
-        public Criteria andNearly2YearIsNotNull() {
-            addCriterion("nearly_2_year is not null");
+        public Criteria andNearly2YearGrowRateIsNotNull() {
+            addCriterion("nearly_2_year_grow_rate is not null");
             return (Criteria) this;
         }
 
-        public Criteria andNearly2YearEqualTo(BigDecimal value) {
-            addCriterion("nearly_2_year =", value, "nearly2Year");
+        public Criteria andNearly2YearGrowRateEqualTo(BigDecimal value) {
+            addCriterion("nearly_2_year_grow_rate =", value, "nearly2YearGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly2YearNotEqualTo(BigDecimal value) {
-            addCriterion("nearly_2_year <>", value, "nearly2Year");
+        public Criteria andNearly2YearGrowRateNotEqualTo(BigDecimal value) {
+            addCriterion("nearly_2_year_grow_rate <>", value, "nearly2YearGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly2YearGreaterThan(BigDecimal value) {
-            addCriterion("nearly_2_year >", value, "nearly2Year");
+        public Criteria andNearly2YearGrowRateGreaterThan(BigDecimal value) {
+            addCriterion("nearly_2_year_grow_rate >", value, "nearly2YearGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly2YearGreaterThanOrEqualTo(BigDecimal value) {
-            addCriterion("nearly_2_year >=", value, "nearly2Year");
+        public Criteria andNearly2YearGrowRateGreaterThanOrEqualTo(BigDecimal value) {
+            addCriterion("nearly_2_year_grow_rate >=", value, "nearly2YearGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly2YearLessThan(BigDecimal value) {
-            addCriterion("nearly_2_year <", value, "nearly2Year");
+        public Criteria andNearly2YearGrowRateLessThan(BigDecimal value) {
+            addCriterion("nearly_2_year_grow_rate <", value, "nearly2YearGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly2YearLessThanOrEqualTo(BigDecimal value) {
-            addCriterion("nearly_2_year <=", value, "nearly2Year");
+        public Criteria andNearly2YearGrowRateLessThanOrEqualTo(BigDecimal value) {
+            addCriterion("nearly_2_year_grow_rate <=", value, "nearly2YearGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly2YearIn(List<BigDecimal> values) {
-            addCriterion("nearly_2_year in", values, "nearly2Year");
+        public Criteria andNearly2YearGrowRateIn(List<BigDecimal> values) {
+            addCriterion("nearly_2_year_grow_rate in", values, "nearly2YearGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly2YearNotIn(List<BigDecimal> values) {
-            addCriterion("nearly_2_year not in", values, "nearly2Year");
+        public Criteria andNearly2YearGrowRateNotIn(List<BigDecimal> values) {
+            addCriterion("nearly_2_year_grow_rate not in", values, "nearly2YearGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly2YearBetween(BigDecimal value1, BigDecimal value2) {
-            addCriterion("nearly_2_year between", value1, value2, "nearly2Year");
+        public Criteria andNearly2YearGrowRateBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("nearly_2_year_grow_rate between", value1, value2, "nearly2YearGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly2YearNotBetween(BigDecimal value1, BigDecimal value2) {
-            addCriterion("nearly_2_year not between", value1, value2, "nearly2Year");
+        public Criteria andNearly2YearGrowRateNotBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("nearly_2_year_grow_rate not between", value1, value2, "nearly2YearGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly3YearIsNull() {
-            addCriterion("nearly_3_year is null");
+        public Criteria andNearly3YearGrowRateIsNull() {
+            addCriterion("nearly_3_year_grow_rate is null");
             return (Criteria) this;
         }
 
-        public Criteria andNearly3YearIsNotNull() {
-            addCriterion("nearly_3_year is not null");
+        public Criteria andNearly3YearGrowRateIsNotNull() {
+            addCriterion("nearly_3_year_grow_rate is not null");
             return (Criteria) this;
         }
 
-        public Criteria andNearly3YearEqualTo(BigDecimal value) {
-            addCriterion("nearly_3_year =", value, "nearly3Year");
+        public Criteria andNearly3YearGrowRateEqualTo(BigDecimal value) {
+            addCriterion("nearly_3_year_grow_rate =", value, "nearly3YearGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly3YearNotEqualTo(BigDecimal value) {
-            addCriterion("nearly_3_year <>", value, "nearly3Year");
+        public Criteria andNearly3YearGrowRateNotEqualTo(BigDecimal value) {
+            addCriterion("nearly_3_year_grow_rate <>", value, "nearly3YearGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly3YearGreaterThan(BigDecimal value) {
-            addCriterion("nearly_3_year >", value, "nearly3Year");
+        public Criteria andNearly3YearGrowRateGreaterThan(BigDecimal value) {
+            addCriterion("nearly_3_year_grow_rate >", value, "nearly3YearGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly3YearGreaterThanOrEqualTo(BigDecimal value) {
-            addCriterion("nearly_3_year >=", value, "nearly3Year");
+        public Criteria andNearly3YearGrowRateGreaterThanOrEqualTo(BigDecimal value) {
+            addCriterion("nearly_3_year_grow_rate >=", value, "nearly3YearGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly3YearLessThan(BigDecimal value) {
-            addCriterion("nearly_3_year <", value, "nearly3Year");
+        public Criteria andNearly3YearGrowRateLessThan(BigDecimal value) {
+            addCriterion("nearly_3_year_grow_rate <", value, "nearly3YearGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly3YearLessThanOrEqualTo(BigDecimal value) {
-            addCriterion("nearly_3_year <=", value, "nearly3Year");
+        public Criteria andNearly3YearGrowRateLessThanOrEqualTo(BigDecimal value) {
+            addCriterion("nearly_3_year_grow_rate <=", value, "nearly3YearGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly3YearIn(List<BigDecimal> values) {
-            addCriterion("nearly_3_year in", values, "nearly3Year");
+        public Criteria andNearly3YearGrowRateIn(List<BigDecimal> values) {
+            addCriterion("nearly_3_year_grow_rate in", values, "nearly3YearGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly3YearNotIn(List<BigDecimal> values) {
-            addCriterion("nearly_3_year not in", values, "nearly3Year");
+        public Criteria andNearly3YearGrowRateNotIn(List<BigDecimal> values) {
+            addCriterion("nearly_3_year_grow_rate not in", values, "nearly3YearGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly3YearBetween(BigDecimal value1, BigDecimal value2) {
-            addCriterion("nearly_3_year between", value1, value2, "nearly3Year");
+        public Criteria andNearly3YearGrowRateBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("nearly_3_year_grow_rate between", value1, value2, "nearly3YearGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andNearly3YearNotBetween(BigDecimal value1, BigDecimal value2) {
-            addCriterion("nearly_3_year not between", value1, value2, "nearly3Year");
+        public Criteria andNearly3YearGrowRateNotBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("nearly_3_year_grow_rate not between", value1, value2, "nearly3YearGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andSinceThisYearIsNull() {
-            addCriterion("since_this_year is null");
+        public Criteria andSinceThisYearGrowRateIsNull() {
+            addCriterion("since_this_year_grow_rate is null");
             return (Criteria) this;
         }
 
-        public Criteria andSinceThisYearIsNotNull() {
-            addCriterion("since_this_year is not null");
+        public Criteria andSinceThisYearGrowRateIsNotNull() {
+            addCriterion("since_this_year_grow_rate is not null");
             return (Criteria) this;
         }
 
-        public Criteria andSinceThisYearEqualTo(BigDecimal value) {
-            addCriterion("since_this_year =", value, "sinceThisYear");
+        public Criteria andSinceThisYearGrowRateEqualTo(BigDecimal value) {
+            addCriterion("since_this_year_grow_rate =", value, "sinceThisYearGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andSinceThisYearNotEqualTo(BigDecimal value) {
-            addCriterion("since_this_year <>", value, "sinceThisYear");
+        public Criteria andSinceThisYearGrowRateNotEqualTo(BigDecimal value) {
+            addCriterion("since_this_year_grow_rate <>", value, "sinceThisYearGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andSinceThisYearGreaterThan(BigDecimal value) {
-            addCriterion("since_this_year >", value, "sinceThisYear");
+        public Criteria andSinceThisYearGrowRateGreaterThan(BigDecimal value) {
+            addCriterion("since_this_year_grow_rate >", value, "sinceThisYearGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andSinceThisYearGreaterThanOrEqualTo(BigDecimal value) {
-            addCriterion("since_this_year >=", value, "sinceThisYear");
+        public Criteria andSinceThisYearGrowRateGreaterThanOrEqualTo(BigDecimal value) {
+            addCriterion("since_this_year_grow_rate >=", value, "sinceThisYearGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andSinceThisYearLessThan(BigDecimal value) {
-            addCriterion("since_this_year <", value, "sinceThisYear");
+        public Criteria andSinceThisYearGrowRateLessThan(BigDecimal value) {
+            addCriterion("since_this_year_grow_rate <", value, "sinceThisYearGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andSinceThisYearLessThanOrEqualTo(BigDecimal value) {
-            addCriterion("since_this_year <=", value, "sinceThisYear");
+        public Criteria andSinceThisYearGrowRateLessThanOrEqualTo(BigDecimal value) {
+            addCriterion("since_this_year_grow_rate <=", value, "sinceThisYearGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andSinceThisYearIn(List<BigDecimal> values) {
-            addCriterion("since_this_year in", values, "sinceThisYear");
+        public Criteria andSinceThisYearGrowRateIn(List<BigDecimal> values) {
+            addCriterion("since_this_year_grow_rate in", values, "sinceThisYearGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andSinceThisYearNotIn(List<BigDecimal> values) {
-            addCriterion("since_this_year not in", values, "sinceThisYear");
+        public Criteria andSinceThisYearGrowRateNotIn(List<BigDecimal> values) {
+            addCriterion("since_this_year_grow_rate not in", values, "sinceThisYearGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andSinceThisYearBetween(BigDecimal value1, BigDecimal value2) {
-            addCriterion("since_this_year between", value1, value2, "sinceThisYear");
+        public Criteria andSinceThisYearGrowRateBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("since_this_year_grow_rate between", value1, value2, "sinceThisYearGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andSinceThisYearNotBetween(BigDecimal value1, BigDecimal value2) {
-            addCriterion("since_this_year not between", value1, value2, "sinceThisYear");
+        public Criteria andSinceThisYearGrowRateNotBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("since_this_year_grow_rate not between", value1, value2, "sinceThisYearGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andSinceEstablishIsNull() {
-            addCriterion("since_establish is null");
+        public Criteria andSinceEstablishGrowRateIsNull() {
+            addCriterion("since_establish_grow_rate is null");
             return (Criteria) this;
         }
 
-        public Criteria andSinceEstablishIsNotNull() {
-            addCriterion("since_establish is not null");
+        public Criteria andSinceEstablishGrowRateIsNotNull() {
+            addCriterion("since_establish_grow_rate is not null");
             return (Criteria) this;
         }
 
-        public Criteria andSinceEstablishEqualTo(BigDecimal value) {
-            addCriterion("since_establish =", value, "sinceEstablish");
+        public Criteria andSinceEstablishGrowRateEqualTo(BigDecimal value) {
+            addCriterion("since_establish_grow_rate =", value, "sinceEstablishGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andSinceEstablishNotEqualTo(BigDecimal value) {
-            addCriterion("since_establish <>", value, "sinceEstablish");
+        public Criteria andSinceEstablishGrowRateNotEqualTo(BigDecimal value) {
+            addCriterion("since_establish_grow_rate <>", value, "sinceEstablishGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andSinceEstablishGreaterThan(BigDecimal value) {
-            addCriterion("since_establish >", value, "sinceEstablish");
+        public Criteria andSinceEstablishGrowRateGreaterThan(BigDecimal value) {
+            addCriterion("since_establish_grow_rate >", value, "sinceEstablishGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andSinceEstablishGreaterThanOrEqualTo(BigDecimal value) {
-            addCriterion("since_establish >=", value, "sinceEstablish");
+        public Criteria andSinceEstablishGrowRateGreaterThanOrEqualTo(BigDecimal value) {
+            addCriterion("since_establish_grow_rate >=", value, "sinceEstablishGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andSinceEstablishLessThan(BigDecimal value) {
-            addCriterion("since_establish <", value, "sinceEstablish");
+        public Criteria andSinceEstablishGrowRateLessThan(BigDecimal value) {
+            addCriterion("since_establish_grow_rate <", value, "sinceEstablishGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andSinceEstablishLessThanOrEqualTo(BigDecimal value) {
-            addCriterion("since_establish <=", value, "sinceEstablish");
+        public Criteria andSinceEstablishGrowRateLessThanOrEqualTo(BigDecimal value) {
+            addCriterion("since_establish_grow_rate <=", value, "sinceEstablishGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andSinceEstablishIn(List<BigDecimal> values) {
-            addCriterion("since_establish in", values, "sinceEstablish");
+        public Criteria andSinceEstablishGrowRateIn(List<BigDecimal> values) {
+            addCriterion("since_establish_grow_rate in", values, "sinceEstablishGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andSinceEstablishNotIn(List<BigDecimal> values) {
-            addCriterion("since_establish not in", values, "sinceEstablish");
+        public Criteria andSinceEstablishGrowRateNotIn(List<BigDecimal> values) {
+            addCriterion("since_establish_grow_rate not in", values, "sinceEstablishGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andSinceEstablishBetween(BigDecimal value1, BigDecimal value2) {
-            addCriterion("since_establish between", value1, value2, "sinceEstablish");
+        public Criteria andSinceEstablishGrowRateBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("since_establish_grow_rate between", value1, value2, "sinceEstablishGrowRate");
             return (Criteria) this;
         }
 
-        public Criteria andSinceEstablishNotBetween(BigDecimal value1, BigDecimal value2) {
-            addCriterion("since_establish not between", value1, value2, "sinceEstablish");
+        public Criteria andSinceEstablishGrowRateNotBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("since_establish_grow_rate not between", value1, value2, "sinceEstablishGrowRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly1YearWaveRateIsNull() {
+            addCriterion("nearly_1_year_wave_rate is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly1YearWaveRateIsNotNull() {
+            addCriterion("nearly_1_year_wave_rate is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly1YearWaveRateEqualTo(BigDecimal value) {
+            addCriterion("nearly_1_year_wave_rate =", value, "nearly1YearWaveRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly1YearWaveRateNotEqualTo(BigDecimal value) {
+            addCriterion("nearly_1_year_wave_rate <>", value, "nearly1YearWaveRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly1YearWaveRateGreaterThan(BigDecimal value) {
+            addCriterion("nearly_1_year_wave_rate >", value, "nearly1YearWaveRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly1YearWaveRateGreaterThanOrEqualTo(BigDecimal value) {
+            addCriterion("nearly_1_year_wave_rate >=", value, "nearly1YearWaveRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly1YearWaveRateLessThan(BigDecimal value) {
+            addCriterion("nearly_1_year_wave_rate <", value, "nearly1YearWaveRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly1YearWaveRateLessThanOrEqualTo(BigDecimal value) {
+            addCriterion("nearly_1_year_wave_rate <=", value, "nearly1YearWaveRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly1YearWaveRateIn(List<BigDecimal> values) {
+            addCriterion("nearly_1_year_wave_rate in", values, "nearly1YearWaveRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly1YearWaveRateNotIn(List<BigDecimal> values) {
+            addCriterion("nearly_1_year_wave_rate not in", values, "nearly1YearWaveRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly1YearWaveRateBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("nearly_1_year_wave_rate between", value1, value2, "nearly1YearWaveRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly1YearWaveRateNotBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("nearly_1_year_wave_rate not between", value1, value2, "nearly1YearWaveRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly2YearWaveRateIsNull() {
+            addCriterion("nearly_2_year_wave_rate is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly2YearWaveRateIsNotNull() {
+            addCriterion("nearly_2_year_wave_rate is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly2YearWaveRateEqualTo(BigDecimal value) {
+            addCriterion("nearly_2_year_wave_rate =", value, "nearly2YearWaveRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly2YearWaveRateNotEqualTo(BigDecimal value) {
+            addCriterion("nearly_2_year_wave_rate <>", value, "nearly2YearWaveRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly2YearWaveRateGreaterThan(BigDecimal value) {
+            addCriterion("nearly_2_year_wave_rate >", value, "nearly2YearWaveRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly2YearWaveRateGreaterThanOrEqualTo(BigDecimal value) {
+            addCriterion("nearly_2_year_wave_rate >=", value, "nearly2YearWaveRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly2YearWaveRateLessThan(BigDecimal value) {
+            addCriterion("nearly_2_year_wave_rate <", value, "nearly2YearWaveRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly2YearWaveRateLessThanOrEqualTo(BigDecimal value) {
+            addCriterion("nearly_2_year_wave_rate <=", value, "nearly2YearWaveRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly2YearWaveRateIn(List<BigDecimal> values) {
+            addCriterion("nearly_2_year_wave_rate in", values, "nearly2YearWaveRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly2YearWaveRateNotIn(List<BigDecimal> values) {
+            addCriterion("nearly_2_year_wave_rate not in", values, "nearly2YearWaveRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly2YearWaveRateBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("nearly_2_year_wave_rate between", value1, value2, "nearly2YearWaveRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly2YearWaveRateNotBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("nearly_2_year_wave_rate not between", value1, value2, "nearly2YearWaveRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly3YearWaveRateIsNull() {
+            addCriterion("nearly_3_year_wave_rate is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly3YearWaveRateIsNotNull() {
+            addCriterion("nearly_3_year_wave_rate is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly3YearWaveRateEqualTo(BigDecimal value) {
+            addCriterion("nearly_3_year_wave_rate =", value, "nearly3YearWaveRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly3YearWaveRateNotEqualTo(BigDecimal value) {
+            addCriterion("nearly_3_year_wave_rate <>", value, "nearly3YearWaveRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly3YearWaveRateGreaterThan(BigDecimal value) {
+            addCriterion("nearly_3_year_wave_rate >", value, "nearly3YearWaveRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly3YearWaveRateGreaterThanOrEqualTo(BigDecimal value) {
+            addCriterion("nearly_3_year_wave_rate >=", value, "nearly3YearWaveRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly3YearWaveRateLessThan(BigDecimal value) {
+            addCriterion("nearly_3_year_wave_rate <", value, "nearly3YearWaveRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly3YearWaveRateLessThanOrEqualTo(BigDecimal value) {
+            addCriterion("nearly_3_year_wave_rate <=", value, "nearly3YearWaveRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly3YearWaveRateIn(List<BigDecimal> values) {
+            addCriterion("nearly_3_year_wave_rate in", values, "nearly3YearWaveRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly3YearWaveRateNotIn(List<BigDecimal> values) {
+            addCriterion("nearly_3_year_wave_rate not in", values, "nearly3YearWaveRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly3YearWaveRateBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("nearly_3_year_wave_rate between", value1, value2, "nearly3YearWaveRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly3YearWaveRateNotBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("nearly_3_year_wave_rate not between", value1, value2, "nearly3YearWaveRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly1YearSharpRateIsNull() {
+            addCriterion("nearly_1_year_sharp_rate is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly1YearSharpRateIsNotNull() {
+            addCriterion("nearly_1_year_sharp_rate is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly1YearSharpRateEqualTo(BigDecimal value) {
+            addCriterion("nearly_1_year_sharp_rate =", value, "nearly1YearSharpRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly1YearSharpRateNotEqualTo(BigDecimal value) {
+            addCriterion("nearly_1_year_sharp_rate <>", value, "nearly1YearSharpRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly1YearSharpRateGreaterThan(BigDecimal value) {
+            addCriterion("nearly_1_year_sharp_rate >", value, "nearly1YearSharpRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly1YearSharpRateGreaterThanOrEqualTo(BigDecimal value) {
+            addCriterion("nearly_1_year_sharp_rate >=", value, "nearly1YearSharpRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly1YearSharpRateLessThan(BigDecimal value) {
+            addCriterion("nearly_1_year_sharp_rate <", value, "nearly1YearSharpRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly1YearSharpRateLessThanOrEqualTo(BigDecimal value) {
+            addCriterion("nearly_1_year_sharp_rate <=", value, "nearly1YearSharpRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly1YearSharpRateIn(List<BigDecimal> values) {
+            addCriterion("nearly_1_year_sharp_rate in", values, "nearly1YearSharpRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly1YearSharpRateNotIn(List<BigDecimal> values) {
+            addCriterion("nearly_1_year_sharp_rate not in", values, "nearly1YearSharpRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly1YearSharpRateBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("nearly_1_year_sharp_rate between", value1, value2, "nearly1YearSharpRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly1YearSharpRateNotBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("nearly_1_year_sharp_rate not between", value1, value2, "nearly1YearSharpRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly2YearSharpRateIsNull() {
+            addCriterion("nearly_2_year_sharp_rate is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly2YearSharpRateIsNotNull() {
+            addCriterion("nearly_2_year_sharp_rate is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly2YearSharpRateEqualTo(BigDecimal value) {
+            addCriterion("nearly_2_year_sharp_rate =", value, "nearly2YearSharpRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly2YearSharpRateNotEqualTo(BigDecimal value) {
+            addCriterion("nearly_2_year_sharp_rate <>", value, "nearly2YearSharpRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly2YearSharpRateGreaterThan(BigDecimal value) {
+            addCriterion("nearly_2_year_sharp_rate >", value, "nearly2YearSharpRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly2YearSharpRateGreaterThanOrEqualTo(BigDecimal value) {
+            addCriterion("nearly_2_year_sharp_rate >=", value, "nearly2YearSharpRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly2YearSharpRateLessThan(BigDecimal value) {
+            addCriterion("nearly_2_year_sharp_rate <", value, "nearly2YearSharpRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly2YearSharpRateLessThanOrEqualTo(BigDecimal value) {
+            addCriterion("nearly_2_year_sharp_rate <=", value, "nearly2YearSharpRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly2YearSharpRateIn(List<BigDecimal> values) {
+            addCriterion("nearly_2_year_sharp_rate in", values, "nearly2YearSharpRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly2YearSharpRateNotIn(List<BigDecimal> values) {
+            addCriterion("nearly_2_year_sharp_rate not in", values, "nearly2YearSharpRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly2YearSharpRateBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("nearly_2_year_sharp_rate between", value1, value2, "nearly2YearSharpRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly2YearSharpRateNotBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("nearly_2_year_sharp_rate not between", value1, value2, "nearly2YearSharpRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly3YearSharpRateIsNull() {
+            addCriterion("nearly_3_year_sharp_rate is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly3YearSharpRateIsNotNull() {
+            addCriterion("nearly_3_year_sharp_rate is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly3YearSharpRateEqualTo(BigDecimal value) {
+            addCriterion("nearly_3_year_sharp_rate =", value, "nearly3YearSharpRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly3YearSharpRateNotEqualTo(BigDecimal value) {
+            addCriterion("nearly_3_year_sharp_rate <>", value, "nearly3YearSharpRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly3YearSharpRateGreaterThan(BigDecimal value) {
+            addCriterion("nearly_3_year_sharp_rate >", value, "nearly3YearSharpRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly3YearSharpRateGreaterThanOrEqualTo(BigDecimal value) {
+            addCriterion("nearly_3_year_sharp_rate >=", value, "nearly3YearSharpRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly3YearSharpRateLessThan(BigDecimal value) {
+            addCriterion("nearly_3_year_sharp_rate <", value, "nearly3YearSharpRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly3YearSharpRateLessThanOrEqualTo(BigDecimal value) {
+            addCriterion("nearly_3_year_sharp_rate <=", value, "nearly3YearSharpRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly3YearSharpRateIn(List<BigDecimal> values) {
+            addCriterion("nearly_3_year_sharp_rate in", values, "nearly3YearSharpRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly3YearSharpRateNotIn(List<BigDecimal> values) {
+            addCriterion("nearly_3_year_sharp_rate not in", values, "nearly3YearSharpRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly3YearSharpRateBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("nearly_3_year_sharp_rate between", value1, value2, "nearly3YearSharpRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly3YearSharpRateNotBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("nearly_3_year_sharp_rate not between", value1, value2, "nearly3YearSharpRate");
             return (Criteria) this;
         }
 
@@ -1240,6 +1600,266 @@ public class FundDetailInfoExample {
 
         public Criteria andEstablishDateNotBetween(Date value1, Date value2) {
             addCriterionForJDBCDate("establish_date not between", value1, value2, "establishDate");
+            return (Criteria) this;
+        }
+
+        public Criteria andFundManagerIsNull() {
+            addCriterion("fund_manager is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andFundManagerIsNotNull() {
+            addCriterion("fund_manager is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andFundManagerEqualTo(String value) {
+            addCriterion("fund_manager =", value, "fundManager");
+            return (Criteria) this;
+        }
+
+        public Criteria andFundManagerNotEqualTo(String value) {
+            addCriterion("fund_manager <>", value, "fundManager");
+            return (Criteria) this;
+        }
+
+        public Criteria andFundManagerGreaterThan(String value) {
+            addCriterion("fund_manager >", value, "fundManager");
+            return (Criteria) this;
+        }
+
+        public Criteria andFundManagerGreaterThanOrEqualTo(String value) {
+            addCriterion("fund_manager >=", value, "fundManager");
+            return (Criteria) this;
+        }
+
+        public Criteria andFundManagerLessThan(String value) {
+            addCriterion("fund_manager <", value, "fundManager");
+            return (Criteria) this;
+        }
+
+        public Criteria andFundManagerLessThanOrEqualTo(String value) {
+            addCriterion("fund_manager <=", value, "fundManager");
+            return (Criteria) this;
+        }
+
+        public Criteria andFundManagerLike(String value) {
+            addCriterion("fund_manager like", value, "fundManager");
+            return (Criteria) this;
+        }
+
+        public Criteria andFundManagerNotLike(String value) {
+            addCriterion("fund_manager not like", value, "fundManager");
+            return (Criteria) this;
+        }
+
+        public Criteria andFundManagerIn(List<String> values) {
+            addCriterion("fund_manager in", values, "fundManager");
+            return (Criteria) this;
+        }
+
+        public Criteria andFundManagerNotIn(List<String> values) {
+            addCriterion("fund_manager not in", values, "fundManager");
+            return (Criteria) this;
+        }
+
+        public Criteria andFundManagerBetween(String value1, String value2) {
+            addCriterion("fund_manager between", value1, value2, "fundManager");
+            return (Criteria) this;
+        }
+
+        public Criteria andFundManagerNotBetween(String value1, String value2) {
+            addCriterion("fund_manager not between", value1, value2, "fundManager");
+            return (Criteria) this;
+        }
+
+        public Criteria andManagerStartDateIsNull() {
+            addCriterion("manager_start_date is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andManagerStartDateIsNotNull() {
+            addCriterion("manager_start_date is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andManagerStartDateEqualTo(Date value) {
+            addCriterionForJDBCDate("manager_start_date =", value, "managerStartDate");
+            return (Criteria) this;
+        }
+
+        public Criteria andManagerStartDateNotEqualTo(Date value) {
+            addCriterionForJDBCDate("manager_start_date <>", value, "managerStartDate");
+            return (Criteria) this;
+        }
+
+        public Criteria andManagerStartDateGreaterThan(Date value) {
+            addCriterionForJDBCDate("manager_start_date >", value, "managerStartDate");
+            return (Criteria) this;
+        }
+
+        public Criteria andManagerStartDateGreaterThanOrEqualTo(Date value) {
+            addCriterionForJDBCDate("manager_start_date >=", value, "managerStartDate");
+            return (Criteria) this;
+        }
+
+        public Criteria andManagerStartDateLessThan(Date value) {
+            addCriterionForJDBCDate("manager_start_date <", value, "managerStartDate");
+            return (Criteria) this;
+        }
+
+        public Criteria andManagerStartDateLessThanOrEqualTo(Date value) {
+            addCriterionForJDBCDate("manager_start_date <=", value, "managerStartDate");
+            return (Criteria) this;
+        }
+
+        public Criteria andManagerStartDateIn(List<Date> values) {
+            addCriterionForJDBCDate("manager_start_date in", values, "managerStartDate");
+            return (Criteria) this;
+        }
+
+        public Criteria andManagerStartDateNotIn(List<Date> values) {
+            addCriterionForJDBCDate("manager_start_date not in", values, "managerStartDate");
+            return (Criteria) this;
+        }
+
+        public Criteria andManagerStartDateBetween(Date value1, Date value2) {
+            addCriterionForJDBCDate("manager_start_date between", value1, value2, "managerStartDate");
+            return (Criteria) this;
+        }
+
+        public Criteria andManagerStartDateNotBetween(Date value1, Date value2) {
+            addCriterionForJDBCDate("manager_start_date not between", value1, value2, "managerStartDate");
+            return (Criteria) this;
+        }
+
+        public Criteria andPreviousFundManagerIsNull() {
+            addCriterion("previous_fund_manager is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andPreviousFundManagerIsNotNull() {
+            addCriterion("previous_fund_manager is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andPreviousFundManagerEqualTo(String value) {
+            addCriterion("previous_fund_manager =", value, "previousFundManager");
+            return (Criteria) this;
+        }
+
+        public Criteria andPreviousFundManagerNotEqualTo(String value) {
+            addCriterion("previous_fund_manager <>", value, "previousFundManager");
+            return (Criteria) this;
+        }
+
+        public Criteria andPreviousFundManagerGreaterThan(String value) {
+            addCriterion("previous_fund_manager >", value, "previousFundManager");
+            return (Criteria) this;
+        }
+
+        public Criteria andPreviousFundManagerGreaterThanOrEqualTo(String value) {
+            addCriterion("previous_fund_manager >=", value, "previousFundManager");
+            return (Criteria) this;
+        }
+
+        public Criteria andPreviousFundManagerLessThan(String value) {
+            addCriterion("previous_fund_manager <", value, "previousFundManager");
+            return (Criteria) this;
+        }
+
+        public Criteria andPreviousFundManagerLessThanOrEqualTo(String value) {
+            addCriterion("previous_fund_manager <=", value, "previousFundManager");
+            return (Criteria) this;
+        }
+
+        public Criteria andPreviousFundManagerLike(String value) {
+            addCriterion("previous_fund_manager like", value, "previousFundManager");
+            return (Criteria) this;
+        }
+
+        public Criteria andPreviousFundManagerNotLike(String value) {
+            addCriterion("previous_fund_manager not like", value, "previousFundManager");
+            return (Criteria) this;
+        }
+
+        public Criteria andPreviousFundManagerIn(List<String> values) {
+            addCriterion("previous_fund_manager in", values, "previousFundManager");
+            return (Criteria) this;
+        }
+
+        public Criteria andPreviousFundManagerNotIn(List<String> values) {
+            addCriterion("previous_fund_manager not in", values, "previousFundManager");
+            return (Criteria) this;
+        }
+
+        public Criteria andPreviousFundManagerBetween(String value1, String value2) {
+            addCriterion("previous_fund_manager between", value1, value2, "previousFundManager");
+            return (Criteria) this;
+        }
+
+        public Criteria andPreviousFundManagerNotBetween(String value1, String value2) {
+            addCriterion("previous_fund_manager not between", value1, value2, "previousFundManager");
+            return (Criteria) this;
+        }
+
+        public Criteria andPreviousManagerStartDateIsNull() {
+            addCriterion("previous_manager_start_date is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andPreviousManagerStartDateIsNotNull() {
+            addCriterion("previous_manager_start_date is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andPreviousManagerStartDateEqualTo(Date value) {
+            addCriterionForJDBCDate("previous_manager_start_date =", value, "previousManagerStartDate");
+            return (Criteria) this;
+        }
+
+        public Criteria andPreviousManagerStartDateNotEqualTo(Date value) {
+            addCriterionForJDBCDate("previous_manager_start_date <>", value, "previousManagerStartDate");
+            return (Criteria) this;
+        }
+
+        public Criteria andPreviousManagerStartDateGreaterThan(Date value) {
+            addCriterionForJDBCDate("previous_manager_start_date >", value, "previousManagerStartDate");
+            return (Criteria) this;
+        }
+
+        public Criteria andPreviousManagerStartDateGreaterThanOrEqualTo(Date value) {
+            addCriterionForJDBCDate("previous_manager_start_date >=", value, "previousManagerStartDate");
+            return (Criteria) this;
+        }
+
+        public Criteria andPreviousManagerStartDateLessThan(Date value) {
+            addCriterionForJDBCDate("previous_manager_start_date <", value, "previousManagerStartDate");
+            return (Criteria) this;
+        }
+
+        public Criteria andPreviousManagerStartDateLessThanOrEqualTo(Date value) {
+            addCriterionForJDBCDate("previous_manager_start_date <=", value, "previousManagerStartDate");
+            return (Criteria) this;
+        }
+
+        public Criteria andPreviousManagerStartDateIn(List<Date> values) {
+            addCriterionForJDBCDate("previous_manager_start_date in", values, "previousManagerStartDate");
+            return (Criteria) this;
+        }
+
+        public Criteria andPreviousManagerStartDateNotIn(List<Date> values) {
+            addCriterionForJDBCDate("previous_manager_start_date not in", values, "previousManagerStartDate");
+            return (Criteria) this;
+        }
+
+        public Criteria andPreviousManagerStartDateBetween(Date value1, Date value2) {
+            addCriterionForJDBCDate("previous_manager_start_date between", value1, value2, "previousManagerStartDate");
+            return (Criteria) this;
+        }
+
+        public Criteria andPreviousManagerStartDateNotBetween(Date value1, Date value2) {
+            addCriterionForJDBCDate("previous_manager_start_date not between", value1, value2, "previousManagerStartDate");
             return (Criteria) this;
         }
 
@@ -1363,183 +1983,183 @@ public class FundDetailInfoExample {
             return (Criteria) this;
         }
 
-        public Criteria andServiceChargeIsNull() {
-            addCriterion("service_charge is null");
+        public Criteria andServiceChargeRateIsNull() {
+            addCriterion("service_charge_rate is null");
             return (Criteria) this;
         }
 
-        public Criteria andServiceChargeIsNotNull() {
-            addCriterion("service_charge is not null");
+        public Criteria andServiceChargeRateIsNotNull() {
+            addCriterion("service_charge_rate is not null");
             return (Criteria) this;
         }
 
-        public Criteria andServiceChargeEqualTo(BigDecimal value) {
-            addCriterion("service_charge =", value, "serviceCharge");
+        public Criteria andServiceChargeRateEqualTo(BigDecimal value) {
+            addCriterion("service_charge_rate =", value, "serviceChargeRate");
             return (Criteria) this;
         }
 
-        public Criteria andServiceChargeNotEqualTo(BigDecimal value) {
-            addCriterion("service_charge <>", value, "serviceCharge");
+        public Criteria andServiceChargeRateNotEqualTo(BigDecimal value) {
+            addCriterion("service_charge_rate <>", value, "serviceChargeRate");
             return (Criteria) this;
         }
 
-        public Criteria andServiceChargeGreaterThan(BigDecimal value) {
-            addCriterion("service_charge >", value, "serviceCharge");
+        public Criteria andServiceChargeRateGreaterThan(BigDecimal value) {
+            addCriterion("service_charge_rate >", value, "serviceChargeRate");
             return (Criteria) this;
         }
 
-        public Criteria andServiceChargeGreaterThanOrEqualTo(BigDecimal value) {
-            addCriterion("service_charge >=", value, "serviceCharge");
+        public Criteria andServiceChargeRateGreaterThanOrEqualTo(BigDecimal value) {
+            addCriterion("service_charge_rate >=", value, "serviceChargeRate");
             return (Criteria) this;
         }
 
-        public Criteria andServiceChargeLessThan(BigDecimal value) {
-            addCriterion("service_charge <", value, "serviceCharge");
+        public Criteria andServiceChargeRateLessThan(BigDecimal value) {
+            addCriterion("service_charge_rate <", value, "serviceChargeRate");
             return (Criteria) this;
         }
 
-        public Criteria andServiceChargeLessThanOrEqualTo(BigDecimal value) {
-            addCriterion("service_charge <=", value, "serviceCharge");
+        public Criteria andServiceChargeRateLessThanOrEqualTo(BigDecimal value) {
+            addCriterion("service_charge_rate <=", value, "serviceChargeRate");
             return (Criteria) this;
         }
 
-        public Criteria andServiceChargeIn(List<BigDecimal> values) {
-            addCriterion("service_charge in", values, "serviceCharge");
+        public Criteria andServiceChargeRateIn(List<BigDecimal> values) {
+            addCriterion("service_charge_rate in", values, "serviceChargeRate");
             return (Criteria) this;
         }
 
-        public Criteria andServiceChargeNotIn(List<BigDecimal> values) {
-            addCriterion("service_charge not in", values, "serviceCharge");
+        public Criteria andServiceChargeRateNotIn(List<BigDecimal> values) {
+            addCriterion("service_charge_rate not in", values, "serviceChargeRate");
             return (Criteria) this;
         }
 
-        public Criteria andServiceChargeBetween(BigDecimal value1, BigDecimal value2) {
-            addCriterion("service_charge between", value1, value2, "serviceCharge");
+        public Criteria andServiceChargeRateBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("service_charge_rate between", value1, value2, "serviceChargeRate");
             return (Criteria) this;
         }
 
-        public Criteria andServiceChargeNotBetween(BigDecimal value1, BigDecimal value2) {
-            addCriterion("service_charge not between", value1, value2, "serviceCharge");
+        public Criteria andServiceChargeRateNotBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("service_charge_rate not between", value1, value2, "serviceChargeRate");
             return (Criteria) this;
         }
 
-        public Criteria andDiscountServiceChargeIsNull() {
-            addCriterion("discount_service_charge is null");
+        public Criteria andDiscountServiceChargeRateIsNull() {
+            addCriterion("discount_service_charge_rate is null");
             return (Criteria) this;
         }
 
-        public Criteria andDiscountServiceChargeIsNotNull() {
-            addCriterion("discount_service_charge is not null");
+        public Criteria andDiscountServiceChargeRateIsNotNull() {
+            addCriterion("discount_service_charge_rate is not null");
             return (Criteria) this;
         }
 
-        public Criteria andDiscountServiceChargeEqualTo(BigDecimal value) {
-            addCriterion("discount_service_charge =", value, "discountServiceCharge");
+        public Criteria andDiscountServiceChargeRateEqualTo(BigDecimal value) {
+            addCriterion("discount_service_charge_rate =", value, "discountServiceChargeRate");
             return (Criteria) this;
         }
 
-        public Criteria andDiscountServiceChargeNotEqualTo(BigDecimal value) {
-            addCriterion("discount_service_charge <>", value, "discountServiceCharge");
+        public Criteria andDiscountServiceChargeRateNotEqualTo(BigDecimal value) {
+            addCriterion("discount_service_charge_rate <>", value, "discountServiceChargeRate");
             return (Criteria) this;
         }
 
-        public Criteria andDiscountServiceChargeGreaterThan(BigDecimal value) {
-            addCriterion("discount_service_charge >", value, "discountServiceCharge");
+        public Criteria andDiscountServiceChargeRateGreaterThan(BigDecimal value) {
+            addCriterion("discount_service_charge_rate >", value, "discountServiceChargeRate");
             return (Criteria) this;
         }
 
-        public Criteria andDiscountServiceChargeGreaterThanOrEqualTo(BigDecimal value) {
-            addCriterion("discount_service_charge >=", value, "discountServiceCharge");
+        public Criteria andDiscountServiceChargeRateGreaterThanOrEqualTo(BigDecimal value) {
+            addCriterion("discount_service_charge_rate >=", value, "discountServiceChargeRate");
             return (Criteria) this;
         }
 
-        public Criteria andDiscountServiceChargeLessThan(BigDecimal value) {
-            addCriterion("discount_service_charge <", value, "discountServiceCharge");
+        public Criteria andDiscountServiceChargeRateLessThan(BigDecimal value) {
+            addCriterion("discount_service_charge_rate <", value, "discountServiceChargeRate");
             return (Criteria) this;
         }
 
-        public Criteria andDiscountServiceChargeLessThanOrEqualTo(BigDecimal value) {
-            addCriterion("discount_service_charge <=", value, "discountServiceCharge");
+        public Criteria andDiscountServiceChargeRateLessThanOrEqualTo(BigDecimal value) {
+            addCriterion("discount_service_charge_rate <=", value, "discountServiceChargeRate");
             return (Criteria) this;
         }
 
-        public Criteria andDiscountServiceChargeIn(List<BigDecimal> values) {
-            addCriterion("discount_service_charge in", values, "discountServiceCharge");
+        public Criteria andDiscountServiceChargeRateIn(List<BigDecimal> values) {
+            addCriterion("discount_service_charge_rate in", values, "discountServiceChargeRate");
             return (Criteria) this;
         }
 
-        public Criteria andDiscountServiceChargeNotIn(List<BigDecimal> values) {
-            addCriterion("discount_service_charge not in", values, "discountServiceCharge");
+        public Criteria andDiscountServiceChargeRateNotIn(List<BigDecimal> values) {
+            addCriterion("discount_service_charge_rate not in", values, "discountServiceChargeRate");
             return (Criteria) this;
         }
 
-        public Criteria andDiscountServiceChargeBetween(BigDecimal value1, BigDecimal value2) {
-            addCriterion("discount_service_charge between", value1, value2, "discountServiceCharge");
+        public Criteria andDiscountServiceChargeRateBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("discount_service_charge_rate between", value1, value2, "discountServiceChargeRate");
             return (Criteria) this;
         }
 
-        public Criteria andDiscountServiceChargeNotBetween(BigDecimal value1, BigDecimal value2) {
-            addCriterion("discount_service_charge not between", value1, value2, "discountServiceCharge");
+        public Criteria andDiscountServiceChargeRateNotBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("discount_service_charge_rate not between", value1, value2, "discountServiceChargeRate");
             return (Criteria) this;
         }
 
-        public Criteria andDiscountIsNull() {
-            addCriterion("discount is null");
+        public Criteria andDiscountRateIsNull() {
+            addCriterion("discount_rate is null");
             return (Criteria) this;
         }
 
-        public Criteria andDiscountIsNotNull() {
-            addCriterion("discount is not null");
+        public Criteria andDiscountRateIsNotNull() {
+            addCriterion("discount_rate is not null");
             return (Criteria) this;
         }
 
-        public Criteria andDiscountEqualTo(BigDecimal value) {
-            addCriterion("discount =", value, "discount");
+        public Criteria andDiscountRateEqualTo(BigDecimal value) {
+            addCriterion("discount_rate =", value, "discountRate");
             return (Criteria) this;
         }
 
-        public Criteria andDiscountNotEqualTo(BigDecimal value) {
-            addCriterion("discount <>", value, "discount");
+        public Criteria andDiscountRateNotEqualTo(BigDecimal value) {
+            addCriterion("discount_rate <>", value, "discountRate");
             return (Criteria) this;
         }
 
-        public Criteria andDiscountGreaterThan(BigDecimal value) {
-            addCriterion("discount >", value, "discount");
+        public Criteria andDiscountRateGreaterThan(BigDecimal value) {
+            addCriterion("discount_rate >", value, "discountRate");
             return (Criteria) this;
         }
 
-        public Criteria andDiscountGreaterThanOrEqualTo(BigDecimal value) {
-            addCriterion("discount >=", value, "discount");
+        public Criteria andDiscountRateGreaterThanOrEqualTo(BigDecimal value) {
+            addCriterion("discount_rate >=", value, "discountRate");
             return (Criteria) this;
         }
 
-        public Criteria andDiscountLessThan(BigDecimal value) {
-            addCriterion("discount <", value, "discount");
+        public Criteria andDiscountRateLessThan(BigDecimal value) {
+            addCriterion("discount_rate <", value, "discountRate");
             return (Criteria) this;
         }
 
-        public Criteria andDiscountLessThanOrEqualTo(BigDecimal value) {
-            addCriterion("discount <=", value, "discount");
+        public Criteria andDiscountRateLessThanOrEqualTo(BigDecimal value) {
+            addCriterion("discount_rate <=", value, "discountRate");
             return (Criteria) this;
         }
 
-        public Criteria andDiscountIn(List<BigDecimal> values) {
-            addCriterion("discount in", values, "discount");
+        public Criteria andDiscountRateIn(List<BigDecimal> values) {
+            addCriterion("discount_rate in", values, "discountRate");
             return (Criteria) this;
         }
 
-        public Criteria andDiscountNotIn(List<BigDecimal> values) {
-            addCriterion("discount not in", values, "discount");
+        public Criteria andDiscountRateNotIn(List<BigDecimal> values) {
+            addCriterion("discount_rate not in", values, "discountRate");
             return (Criteria) this;
         }
 
-        public Criteria andDiscountBetween(BigDecimal value1, BigDecimal value2) {
-            addCriterion("discount between", value1, value2, "discount");
+        public Criteria andDiscountRateBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("discount_rate between", value1, value2, "discountRate");
             return (Criteria) this;
         }
 
-        public Criteria andDiscountNotBetween(BigDecimal value1, BigDecimal value2) {
-            addCriterion("discount not between", value1, value2, "discount");
+        public Criteria andDiscountRateNotBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("discount_rate not between", value1, value2, "discountRate");
             return (Criteria) this;
         }
 
