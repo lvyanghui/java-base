@@ -41,3 +41,14 @@ CREATE TABLE `fund_detail_info` (
   KEY idx_date (`fund_date`,`establish_date`),
   KEY idx_time (`create_time`,`update_time`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+/**
+4433法则是用来挑选基金的一种方式，即一只好的基金要同时满足以下条件：
+1.近1年业绩排名在同类基金中位列前1/4；
+2.近2/3/5年业绩排名在同类基金中位列前1/4；
+3.近3个月业绩排名在同类基金中位列前1/3；
+4.近6个月业绩排名在同类基金中位列前1/3。
+ */
+
+SELECT COUNT(*) FROM fund_detail_info;
+SELECT * FROM fund_detail_info WHERE nearly_1_year_grow_rate IS NOT NULL ORDER BY nearly_1_year_grow_rate DESC LIMIT 0,2211;
