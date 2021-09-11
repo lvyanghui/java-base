@@ -34,9 +34,13 @@ public class FundDetailInfo {
 
     private BigDecimal nearly3YearGrowRate;
 
+    private BigDecimal nearly5YearGrowRate;
+
     private BigDecimal sinceThisYearGrowRate;
 
     private BigDecimal sinceEstablishGrowRate;
+
+    private BigDecimal customGrowRate;
 
     private BigDecimal nearly1YearWaveRate;
 
@@ -60,17 +64,13 @@ public class FundDetailInfo {
 
     private Date previousManagerStartDate;
 
-    private Integer unknown1;
-
-    private BigDecimal custom;
+    private BigDecimal lockPeriod;
 
     private BigDecimal serviceChargeRate;
 
     private BigDecimal discountServiceChargeRate;
 
     private BigDecimal discountRate;
-
-    private BigDecimal unknown2;
 
     private Date createTime;
 
@@ -196,6 +196,14 @@ public class FundDetailInfo {
         this.nearly3YearGrowRate = nearly3YearGrowRate;
     }
 
+    public BigDecimal getNearly5YearGrowRate() {
+        return nearly5YearGrowRate;
+    }
+
+    public void setNearly5YearGrowRate(BigDecimal nearly5YearGrowRate) {
+        this.nearly5YearGrowRate = nearly5YearGrowRate;
+    }
+
     public BigDecimal getSinceThisYearGrowRate() {
         return sinceThisYearGrowRate;
     }
@@ -210,6 +218,14 @@ public class FundDetailInfo {
 
     public void setSinceEstablishGrowRate(BigDecimal sinceEstablishGrowRate) {
         this.sinceEstablishGrowRate = sinceEstablishGrowRate;
+    }
+
+    public BigDecimal getCustomGrowRate() {
+        return customGrowRate;
+    }
+
+    public void setCustomGrowRate(BigDecimal customGrowRate) {
+        this.customGrowRate = customGrowRate;
     }
 
     public BigDecimal getNearly1YearWaveRate() {
@@ -300,20 +316,12 @@ public class FundDetailInfo {
         this.previousManagerStartDate = previousManagerStartDate;
     }
 
-    public Integer getUnknown1() {
-        return unknown1;
+    public BigDecimal getLockPeriod() {
+        return lockPeriod;
     }
 
-    public void setUnknown1(Integer unknown1) {
-        this.unknown1 = unknown1;
-    }
-
-    public BigDecimal getCustom() {
-        return custom;
-    }
-
-    public void setCustom(BigDecimal custom) {
-        this.custom = custom;
+    public void setLockPeriod(BigDecimal lockPeriod) {
+        this.lockPeriod = lockPeriod;
     }
 
     public BigDecimal getServiceChargeRate() {
@@ -338,14 +346,6 @@ public class FundDetailInfo {
 
     public void setDiscountRate(BigDecimal discountRate) {
         this.discountRate = discountRate;
-    }
-
-    public BigDecimal getUnknown2() {
-        return unknown2;
-    }
-
-    public void setUnknown2(BigDecimal unknown2) {
-        this.unknown2 = unknown2;
     }
 
     public Date getCreateTime() {

@@ -1063,6 +1063,66 @@ public class FundDetailInfoExample {
             return (Criteria) this;
         }
 
+        public Criteria andNearly5YearGrowRateIsNull() {
+            addCriterion("nearly_5_year_grow_rate is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly5YearGrowRateIsNotNull() {
+            addCriterion("nearly_5_year_grow_rate is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly5YearGrowRateEqualTo(BigDecimal value) {
+            addCriterion("nearly_5_year_grow_rate =", value, "nearly5YearGrowRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly5YearGrowRateNotEqualTo(BigDecimal value) {
+            addCriterion("nearly_5_year_grow_rate <>", value, "nearly5YearGrowRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly5YearGrowRateGreaterThan(BigDecimal value) {
+            addCriterion("nearly_5_year_grow_rate >", value, "nearly5YearGrowRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly5YearGrowRateGreaterThanOrEqualTo(BigDecimal value) {
+            addCriterion("nearly_5_year_grow_rate >=", value, "nearly5YearGrowRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly5YearGrowRateLessThan(BigDecimal value) {
+            addCriterion("nearly_5_year_grow_rate <", value, "nearly5YearGrowRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly5YearGrowRateLessThanOrEqualTo(BigDecimal value) {
+            addCriterion("nearly_5_year_grow_rate <=", value, "nearly5YearGrowRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly5YearGrowRateIn(List<BigDecimal> values) {
+            addCriterion("nearly_5_year_grow_rate in", values, "nearly5YearGrowRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly5YearGrowRateNotIn(List<BigDecimal> values) {
+            addCriterion("nearly_5_year_grow_rate not in", values, "nearly5YearGrowRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly5YearGrowRateBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("nearly_5_year_grow_rate between", value1, value2, "nearly5YearGrowRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andNearly5YearGrowRateNotBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("nearly_5_year_grow_rate not between", value1, value2, "nearly5YearGrowRate");
+            return (Criteria) this;
+        }
+
         public Criteria andSinceThisYearGrowRateIsNull() {
             addCriterion("since_this_year_grow_rate is null");
             return (Criteria) this;
@@ -1180,6 +1240,66 @@ public class FundDetailInfoExample {
 
         public Criteria andSinceEstablishGrowRateNotBetween(BigDecimal value1, BigDecimal value2) {
             addCriterion("since_establish_grow_rate not between", value1, value2, "sinceEstablishGrowRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andCustomGrowRateIsNull() {
+            addCriterion("custom_grow_rate is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andCustomGrowRateIsNotNull() {
+            addCriterion("custom_grow_rate is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andCustomGrowRateEqualTo(BigDecimal value) {
+            addCriterion("custom_grow_rate =", value, "customGrowRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andCustomGrowRateNotEqualTo(BigDecimal value) {
+            addCriterion("custom_grow_rate <>", value, "customGrowRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andCustomGrowRateGreaterThan(BigDecimal value) {
+            addCriterion("custom_grow_rate >", value, "customGrowRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andCustomGrowRateGreaterThanOrEqualTo(BigDecimal value) {
+            addCriterion("custom_grow_rate >=", value, "customGrowRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andCustomGrowRateLessThan(BigDecimal value) {
+            addCriterion("custom_grow_rate <", value, "customGrowRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andCustomGrowRateLessThanOrEqualTo(BigDecimal value) {
+            addCriterion("custom_grow_rate <=", value, "customGrowRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andCustomGrowRateIn(List<BigDecimal> values) {
+            addCriterion("custom_grow_rate in", values, "customGrowRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andCustomGrowRateNotIn(List<BigDecimal> values) {
+            addCriterion("custom_grow_rate not in", values, "customGrowRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andCustomGrowRateBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("custom_grow_rate between", value1, value2, "customGrowRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andCustomGrowRateNotBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("custom_grow_rate not between", value1, value2, "customGrowRate");
             return (Criteria) this;
         }
 
@@ -1863,123 +1983,63 @@ public class FundDetailInfoExample {
             return (Criteria) this;
         }
 
-        public Criteria andUnknown1IsNull() {
-            addCriterion("unknown_1 is null");
+        public Criteria andLockPeriodIsNull() {
+            addCriterion("lock_period is null");
             return (Criteria) this;
         }
 
-        public Criteria andUnknown1IsNotNull() {
-            addCriterion("unknown_1 is not null");
+        public Criteria andLockPeriodIsNotNull() {
+            addCriterion("lock_period is not null");
             return (Criteria) this;
         }
 
-        public Criteria andUnknown1EqualTo(Integer value) {
-            addCriterion("unknown_1 =", value, "unknown1");
+        public Criteria andLockPeriodEqualTo(BigDecimal value) {
+            addCriterion("lock_period =", value, "lockPeriod");
             return (Criteria) this;
         }
 
-        public Criteria andUnknown1NotEqualTo(Integer value) {
-            addCriterion("unknown_1 <>", value, "unknown1");
+        public Criteria andLockPeriodNotEqualTo(BigDecimal value) {
+            addCriterion("lock_period <>", value, "lockPeriod");
             return (Criteria) this;
         }
 
-        public Criteria andUnknown1GreaterThan(Integer value) {
-            addCriterion("unknown_1 >", value, "unknown1");
+        public Criteria andLockPeriodGreaterThan(BigDecimal value) {
+            addCriterion("lock_period >", value, "lockPeriod");
             return (Criteria) this;
         }
 
-        public Criteria andUnknown1GreaterThanOrEqualTo(Integer value) {
-            addCriterion("unknown_1 >=", value, "unknown1");
+        public Criteria andLockPeriodGreaterThanOrEqualTo(BigDecimal value) {
+            addCriterion("lock_period >=", value, "lockPeriod");
             return (Criteria) this;
         }
 
-        public Criteria andUnknown1LessThan(Integer value) {
-            addCriterion("unknown_1 <", value, "unknown1");
+        public Criteria andLockPeriodLessThan(BigDecimal value) {
+            addCriterion("lock_period <", value, "lockPeriod");
             return (Criteria) this;
         }
 
-        public Criteria andUnknown1LessThanOrEqualTo(Integer value) {
-            addCriterion("unknown_1 <=", value, "unknown1");
+        public Criteria andLockPeriodLessThanOrEqualTo(BigDecimal value) {
+            addCriterion("lock_period <=", value, "lockPeriod");
             return (Criteria) this;
         }
 
-        public Criteria andUnknown1In(List<Integer> values) {
-            addCriterion("unknown_1 in", values, "unknown1");
+        public Criteria andLockPeriodIn(List<BigDecimal> values) {
+            addCriterion("lock_period in", values, "lockPeriod");
             return (Criteria) this;
         }
 
-        public Criteria andUnknown1NotIn(List<Integer> values) {
-            addCriterion("unknown_1 not in", values, "unknown1");
+        public Criteria andLockPeriodNotIn(List<BigDecimal> values) {
+            addCriterion("lock_period not in", values, "lockPeriod");
             return (Criteria) this;
         }
 
-        public Criteria andUnknown1Between(Integer value1, Integer value2) {
-            addCriterion("unknown_1 between", value1, value2, "unknown1");
+        public Criteria andLockPeriodBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("lock_period between", value1, value2, "lockPeriod");
             return (Criteria) this;
         }
 
-        public Criteria andUnknown1NotBetween(Integer value1, Integer value2) {
-            addCriterion("unknown_1 not between", value1, value2, "unknown1");
-            return (Criteria) this;
-        }
-
-        public Criteria andCustomIsNull() {
-            addCriterion("custom is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andCustomIsNotNull() {
-            addCriterion("custom is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andCustomEqualTo(BigDecimal value) {
-            addCriterion("custom =", value, "custom");
-            return (Criteria) this;
-        }
-
-        public Criteria andCustomNotEqualTo(BigDecimal value) {
-            addCriterion("custom <>", value, "custom");
-            return (Criteria) this;
-        }
-
-        public Criteria andCustomGreaterThan(BigDecimal value) {
-            addCriterion("custom >", value, "custom");
-            return (Criteria) this;
-        }
-
-        public Criteria andCustomGreaterThanOrEqualTo(BigDecimal value) {
-            addCriterion("custom >=", value, "custom");
-            return (Criteria) this;
-        }
-
-        public Criteria andCustomLessThan(BigDecimal value) {
-            addCriterion("custom <", value, "custom");
-            return (Criteria) this;
-        }
-
-        public Criteria andCustomLessThanOrEqualTo(BigDecimal value) {
-            addCriterion("custom <=", value, "custom");
-            return (Criteria) this;
-        }
-
-        public Criteria andCustomIn(List<BigDecimal> values) {
-            addCriterion("custom in", values, "custom");
-            return (Criteria) this;
-        }
-
-        public Criteria andCustomNotIn(List<BigDecimal> values) {
-            addCriterion("custom not in", values, "custom");
-            return (Criteria) this;
-        }
-
-        public Criteria andCustomBetween(BigDecimal value1, BigDecimal value2) {
-            addCriterion("custom between", value1, value2, "custom");
-            return (Criteria) this;
-        }
-
-        public Criteria andCustomNotBetween(BigDecimal value1, BigDecimal value2) {
-            addCriterion("custom not between", value1, value2, "custom");
+        public Criteria andLockPeriodNotBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("lock_period not between", value1, value2, "lockPeriod");
             return (Criteria) this;
         }
 
@@ -2160,66 +2220,6 @@ public class FundDetailInfoExample {
 
         public Criteria andDiscountRateNotBetween(BigDecimal value1, BigDecimal value2) {
             addCriterion("discount_rate not between", value1, value2, "discountRate");
-            return (Criteria) this;
-        }
-
-        public Criteria andUnknown2IsNull() {
-            addCriterion("unknown_2 is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andUnknown2IsNotNull() {
-            addCriterion("unknown_2 is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andUnknown2EqualTo(BigDecimal value) {
-            addCriterion("unknown_2 =", value, "unknown2");
-            return (Criteria) this;
-        }
-
-        public Criteria andUnknown2NotEqualTo(BigDecimal value) {
-            addCriterion("unknown_2 <>", value, "unknown2");
-            return (Criteria) this;
-        }
-
-        public Criteria andUnknown2GreaterThan(BigDecimal value) {
-            addCriterion("unknown_2 >", value, "unknown2");
-            return (Criteria) this;
-        }
-
-        public Criteria andUnknown2GreaterThanOrEqualTo(BigDecimal value) {
-            addCriterion("unknown_2 >=", value, "unknown2");
-            return (Criteria) this;
-        }
-
-        public Criteria andUnknown2LessThan(BigDecimal value) {
-            addCriterion("unknown_2 <", value, "unknown2");
-            return (Criteria) this;
-        }
-
-        public Criteria andUnknown2LessThanOrEqualTo(BigDecimal value) {
-            addCriterion("unknown_2 <=", value, "unknown2");
-            return (Criteria) this;
-        }
-
-        public Criteria andUnknown2In(List<BigDecimal> values) {
-            addCriterion("unknown_2 in", values, "unknown2");
-            return (Criteria) this;
-        }
-
-        public Criteria andUnknown2NotIn(List<BigDecimal> values) {
-            addCriterion("unknown_2 not in", values, "unknown2");
-            return (Criteria) this;
-        }
-
-        public Criteria andUnknown2Between(BigDecimal value1, BigDecimal value2) {
-            addCriterion("unknown_2 between", value1, value2, "unknown2");
-            return (Criteria) this;
-        }
-
-        public Criteria andUnknown2NotBetween(BigDecimal value1, BigDecimal value2) {
-            addCriterion("unknown_2 not between", value1, value2, "unknown2");
             return (Criteria) this;
         }
 

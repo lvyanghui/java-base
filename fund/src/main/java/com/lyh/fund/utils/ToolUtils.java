@@ -37,12 +37,12 @@ public class ToolUtils {
         info.setSinceThisYearGrowRate(getBigDecimal(split[14]));
         info.setSinceEstablishGrowRate(getBigDecimal(split[15]));
         info.setEstablishDate(getDate(split[16]));
-        info.setUnknown1(Integer.parseInt(split[17]));
-        info.setCustom(getBigDecimal(split[18]));
+        info.setLockPeriod(getBigDecimal(split[17]));
+        info.setCustomGrowRate(getBigDecimal(split[18]));
         info.setServiceChargeRate(getBigDecimal(split[19].replace("%","")));
         info.setDiscountServiceChargeRate(getBigDecimal(split[20].replace("%","")));
         info.setDiscountRate(getBigDecimal(split[21]));
-        info.setUnknown2(getBigDecimal(split[24]));
+        info.setNearly5YearGrowRate(getBigDecimal(split[24]));
         System.out.println(info.toString());
     }
 
