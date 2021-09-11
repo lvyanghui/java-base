@@ -145,6 +145,8 @@ public class FundService {
         info.setDiscountRate(getBigDecimal(split[21]));
         info.setNearly5YearGrowRate(getBigDecimal(split[24]));
 
+        info.setCreateTime(new Date());
+        info.setUpdateTime(new Date());
         return info;
     }
 
