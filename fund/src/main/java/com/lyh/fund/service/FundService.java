@@ -100,6 +100,8 @@ public class FundService {
         example.createCriteria().andFundCodeEqualTo(info.getFundCode());
         List<FundDetailInfo> infoList = fundDetailInfoMapper.selectByExample(example);
         if(null == infoList || infoList.size() == 0){
+            info.setCreateTime(new Date());
+            info.setUpdateTime(new Date());
             fundDetailInfoMapper.insertSelective(info);
         }else{
             FundDetailInfo detailInfo = infoList.get(0);
@@ -145,8 +147,6 @@ public class FundService {
         info.setDiscountRate(getBigDecimal(split[21]));
         info.setNearly5YearGrowRate(getBigDecimal(split[24]));
 
-        info.setCreateTime(new Date());
-        info.setUpdateTime(new Date());
         return info;
     }
 
