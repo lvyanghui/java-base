@@ -8,8 +8,8 @@ import com.lv.base.SleepUtil;
 public class TestLock {
 
     public static void main(String[] args){
-        TestLock testLock = new TestLock();
-        testLock.test();
+        /*TestLock testLock = new TestLock();
+        testLock.test();*/
     }
 
 
