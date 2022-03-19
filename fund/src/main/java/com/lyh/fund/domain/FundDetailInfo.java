@@ -363,4 +363,46 @@ public class FundDetailInfo {
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
     }
+
+    @Override
+    public String toString() {
+        return "FundDetailInfo{" +
+                "id=" + id +
+                ", fundCode='" + fundCode + '\'' +
+                ", fundName='" + fundName + '\'' +
+                ", fundPinyin='" + fundPinyin + '\'' +
+                ", fundDate=" + fundDate +
+                ", netAssetValue=" + netAssetValue +
+                ", accumulatedNet=" + accumulatedNet +
+                ", dailyGrowRate=" + dailyGrowRate +
+                ", nearly1WeekGrowRate=" + nearly1WeekGrowRate +
+                ", nearly1MonthGrowRate=" + nearly1MonthGrowRate +
+                ", nearly3MonthGrowRate=" + nearly3MonthGrowRate +
+                ", nearly6MonthGrowRate=" + nearly6MonthGrowRate +
+                ", nearly1YearGrowRate=" + nearly1YearGrowRate +
+                ", nearly2YearGrowRate=" + nearly2YearGrowRate +
+                ", nearly3YearGrowRate=" + nearly3YearGrowRate +
+                ", nearly5YearGrowRate=" + nearly5YearGrowRate +
+                ", sinceThisYearGrowRate=" + sinceThisYearGrowRate +
+                ", sinceEstablishGrowRate=" + sinceEstablishGrowRate +
+                ", customGrowRate=" + customGrowRate +
+                ", nearly1YearWaveRate=" + nearly1YearWaveRate +
+                ", nearly2YearWaveRate=" + nearly2YearWaveRate +
+                ", nearly3YearWaveRate=" + nearly3YearWaveRate +
+                ", nearly1YearSharpRate=" + nearly1YearSharpRate +
+                ", nearly2YearSharpRate=" + nearly2YearSharpRate +
+                ", nearly3YearSharpRate=" + nearly3YearSharpRate +
+                ", establishDate=" + establishDate +
+                ", fundManager='" + fundManager + '\'' +
+                ", managerStartDate=" + managerStartDate +
+                ", previousFundManager='" + previousFundManager + '\'' +
+                ", previousManagerStartDate=" + previousManagerStartDate +
+                ", lockPeriod=" + lockPeriod +
+                ", serviceChargeRate=" + serviceChargeRate +
+                ", discountServiceChargeRate=" + discountServiceChargeRate +
+                ", discountRate=" + discountRate +
+                ", createTime=" + createTime +
+                ", updateTime=" + updateTime +
+                '}';
+    }
 }

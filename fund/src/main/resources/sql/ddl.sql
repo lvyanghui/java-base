@@ -1,7 +1,7 @@
 CREATE TABLE `fund_detail_info` (
   `id` int NOT NULL AUTO_INCREMENT COMMENT '主键id',
   `fund_code` varchar(16) DEFAULT NULL COMMENT '基金代码',
-  `fund_name` varchar(32) DEFAULT NULL COMMENT '基金简称',
+  `fund_name` varchar(64) DEFAULT NULL COMMENT '基金简称',
   `fund_pinyin` varchar(32) DEFAULT NULL COMMENT '基金拼音',
   `fund_date` date DEFAULT NULL COMMENT '基金日期',
   `net_asset_value` decimal(16,4) DEFAULT NULL COMMENT '单位净值',

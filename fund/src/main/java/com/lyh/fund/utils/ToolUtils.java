@@ -5,6 +5,7 @@ import com.lyh.fund.domain.FundDetailInfo;
 import java.math.BigDecimal;
 import java.text.DateFormat;
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -47,12 +48,12 @@ public class ToolUtils {
     }
 
     public static Date getDate(String data){
-        DateFormat dateFormat = DateFormat.getDateInstance();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         try {
-            Date date = dateFormat.parse(data);
+            Date date = sdf.parse(data);
             return date;
         } catch (ParseException e) {
-            e.printStackTrace();
+            //e.printStackTrace();
         }
         return null;
     }

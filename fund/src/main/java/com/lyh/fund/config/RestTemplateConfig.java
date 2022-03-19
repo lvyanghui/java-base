@@ -20,7 +20,7 @@ public class RestTemplateConfig {
     @Bean
     public RestTemplate restTemplate() {
         restTemplateBuilder.setConnectTimeout(Duration.ofSeconds(5));
-        restTemplateBuilder.setReadTimeout(Duration.ofSeconds(5));
+        restTemplateBuilder.setReadTimeout(Duration.ofSeconds(30));
         return restTemplateBuilder.build();
     }
 }
