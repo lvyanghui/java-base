@@ -158,4 +158,25 @@ public class SingleLinkList {
         head = null;
         size = 0;
     }
+
+    public void reverse(){
+        if(null == this){
+            System.out.println("linklist未初始化");
+            return;
+        }
+
+        if(0 == size || 1 == size){
+            return;
+        }
+
+        Node node = head.getNext();
+        Node pre = null;
+        while (node != null) {
+            Node next = node.getNext();
+            node.setNext(pre);
+            pre = node;
+            node = next;
+        }
+        this.head.setNext(pre);
+    }
 }
