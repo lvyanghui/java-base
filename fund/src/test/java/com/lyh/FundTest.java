@@ -21,6 +21,7 @@ public class FundTest {
         fundService.insertFund();
     }
 
+
     @Test
     public void getFund(){
         fundService.getFunds();
