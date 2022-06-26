@@ -52,8 +52,8 @@ CREATE TABLE `fund_detail_info` (
  
 /**
   1.先按4433法则选出对应基金
-  2.按基金名称排序和近1年增长率倒序排，根据近1年增长率高的和基金经理年限超过3年选出20~30只不同公司的基金，每家公司最多2只；
-    根据近1年增长率高的和基金经理年限小于3年选出10只不同公司的基金，每家公司1只，选择初始爆发高的基金经理；
+  2.按基金名称排序和近1年增长率倒序排，根据近1年增长率高的选出20-30只左右不同公司的基金，每家公司最多2只；
+    需要剔除基金规模小于1亿的；
   3.支付宝查询基金分析指标，根据最大回撤、波动率、夏普比率选择
  */
 
@@ -61,12 +61,19 @@ CREATE TABLE `fund_detail_info` (
   1.模糊搜索查询主题表现好的基金，消费、医疗、新能源、科技、中概
   模糊匹配方式：a)消费-酒、消费、食品饮料、
              b)医疗-医疗、医药、健康、养老
-             c)新能源-新能源、汽车、光伏、环保、先锋
-             d)科技-科技、成长、创新、制造、高端、智能、半导体、科创、
+             c)新能源-新能源、汽车、光伏、环保、低碳
+             d)科技-科技、成长、创新、制造、高端、智能、半导体、科创、先锋
              e)互联网-互联网、恒生
-  2.按基金名称排序和近1年增长率倒序排，根据近1年增长率高的和基金经理年限超过3年选出10~20只不同公司的基金，每家公司最多2只；
-    根据近1年增长率高的和基金经理年限小于3年选出10只不同公司的基金，每家公司1只，选择初始爆发高的基金经理；
+  2.按基金名称排序和近1年增长率倒序排，每个主题根据近1年增长率高的选出5-10只不同公司的基金，每个主题每家公司最多1只；
+    需要剔除基金规模小于1亿的；
   3.支付宝查询基金分析指标，根据最大回撤、波动率、夏普比率选择
+ */
+
+/**
+  综合和主题交叉的以主题为准，剔除规模小于1亿以下的基金，
+  基金以短期1年左右为周期；中期以3-5年为时间线；长期以5-10为周期；每年1月1号，针对短中长3期表现低于前10%的剔除;
+  买入策略：以1个月为定投（100-500元不等）到5层仓，基金跌时，以倒金字塔型投入，5%-2000元；10%-4000元；20%-8000元；30%-16000元
+  卖出策略：针对剔除的基金，趁高点卖出；
  */
 
 SELECT COUNT(id) FROM fund_detail_info;
@@ -107,7 +114,7 @@ AND nearly_3_month_grow_rate > 10.00 AND nearly_6_month_grow_rate > 20.00 AND ne
 AND nearly_2_year_grow_rate > 100.00 AND nearly_3_year_grow_rate > 200.00 AND nearly_5_year_grow_rate >300.00;
 
 --模糊搜索查询表现好的基金
-SELECT fund_code,fund_name,nearly_1_month_grow_rate,nearly_3_month_grow_rate,nearly_6_month_grow_rate,
+SELECT fund_code,fund_name,net_asset_value,accumulated_net,daily_grow_rate,nearly_1_month_grow_rate,nearly_3_month_grow_rate,nearly_6_month_grow_rate,
 nearly_1_year_grow_rate,nearly_2_year_grow_rate,nearly_3_year_grow_rate,nearly_5_year_grow_rate
 FROM fund_detail_info WHERE fund_name LIKE '%消费%'
 AND nearly_3_month_grow_rate > 10.00 AND nearly_6_month_grow_rate > 20.00 AND nearly_1_year_grow_rate > 50.00

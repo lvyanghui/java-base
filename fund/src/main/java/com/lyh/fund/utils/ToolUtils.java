@@ -3,6 +3,7 @@ package com.lyh.fund.utils;
 import com.lyh.fund.domain.FundDetailInfo;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -15,6 +16,13 @@ import java.util.Date;
 public class ToolUtils {
 
     public static void main(String[] args) {
+        BigDecimal divisor = new BigDecimal(100).divide(new BigDecimal(40),2, RoundingMode.HALF_UP);
+        System.out.println(divisor.intValue());
+        FundDetailInfo info = getInfo();
+        System.out.println(info.toString());
+    }
+
+    public static FundDetailInfo getInfo(){
         String data = "009559,嘉实稳惠6个月持有期混合C,JSWH6GYCYQHHC,2021-09-10,1.0590,1.0590,0.04,0.79,1.38,2.87,3.92,,," +
                 ",4.93,5.90,2020-11-27,1,,,0.00%,,,,";
         /*String data = "000011,华夏大盘精选混合A,HXDPJXHHA,2021-09-10,20.9370,27.7410,0.10,-0.22,0.44,3.58,9.78,26.01,70.62," +
@@ -44,9 +52,8 @@ public class ToolUtils {
         info.setDiscountServiceChargeRate(getBigDecimal(split[20].replace("%","")));
         info.setDiscountRate(getBigDecimal(split[21]));
         info.setNearly5YearGrowRate(getBigDecimal(split[24]));
-        System.out.println(info.toString());
+        return info;
     }
-
     public static Date getDate(String data){
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         try {

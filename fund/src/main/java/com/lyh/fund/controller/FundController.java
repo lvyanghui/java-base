@@ -5,8 +5,10 @@ import com.lyh.fund.domain.FundDetailInfo;
 import com.lyh.fund.service.FundService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 /**
@@ -37,5 +39,10 @@ public class FundController {
     @RequestMapping("/getCode")
     public List<String> getCode(){
         return service.getCode();
+    }
+
+    @RequestMapping("/getTopRate")
+    public BigDecimal getTopRate(@RequestParam("percent") int percent){
+        return service.getTopRate(percent);
     }
 }

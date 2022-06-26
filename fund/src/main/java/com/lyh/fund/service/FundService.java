@@ -21,6 +21,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.client.RestTemplate;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -304,5 +305,17 @@ public class FundService {
         codes.retainAll(get6MonthCode());
 
         return codes;
+    }
+
+    public BigDecimal getTopRate(int percent){
+        FundDetailInfoExample example = new FundDetailInfoExample();
+        example.createCriteria().andNearly1YearGrowRateIsNotNull();
+        BigDecimal divisor = new BigDecimal(100).divide(new BigDecimal(percent),2, RoundingMode.HALF_UP);
+        int limit = getLimit(example,divisor.intValue());
+        PageHelper.startPage(1, limit);
+        example.setOrderByClause("nearly_1_year_grow_rate desc");
+        List<FundDetailInfo> infoList = fundDetailInfoMapper.selectByExample(example);
+        return infoList.get(infoList.size() - 1).getNearly1YearGrowRate();
+
     }
 }
