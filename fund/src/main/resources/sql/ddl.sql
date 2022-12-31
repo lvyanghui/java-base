@@ -115,7 +115,7 @@ AND nearly_3_month_grow_rate > 10.00 AND nearly_6_month_grow_rate > 20.00 AND ne
 AND nearly_2_year_grow_rate > 100.00 AND nearly_3_year_grow_rate > 200.00 AND nearly_5_year_grow_rate >300.00;
 
 --模糊搜索查询表现好的基金
-SELECT fund_code,fund_name,net_asset_value,accumulated_net,daily_grow_rate,nearly_1_month_grow_rate,nearly_3_month_grow_rate,nearly_6_month_grow_rate,
+SELECT fund_code,fund_name,fund_date,net_asset_value,accumulated_net,daily_grow_rate,nearly_1_month_grow_rate,nearly_3_month_grow_rate,nearly_6_month_grow_rate,
 nearly_1_year_grow_rate,nearly_2_year_grow_rate,nearly_3_year_grow_rate,nearly_5_year_grow_rate
 FROM fund_detail_info WHERE fund_name LIKE '%消费%'
 AND nearly_3_month_grow_rate > 10.00 AND nearly_6_month_grow_rate > 20.00 AND nearly_1_year_grow_rate > 50.00
